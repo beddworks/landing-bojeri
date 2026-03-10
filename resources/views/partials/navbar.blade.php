@@ -14,12 +14,12 @@
             <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors" href="/">Home</a>
 
             <!-- Solutions Mega Menu -->
-            <div class="relative group h-16 flex items-center">
+            <div class="group h-16 flex items-center">
                 <button class="text-sm font-medium text-gray-500 hover:text-brand transition-colors flex items-center gap-1" id="solutions-menu-btn">
                     Solutions
                     <span class="material-symbols-outlined text-[16px] group-hover:rotate-180 transition-transform duration-300">expand_more</span>
                 </button>
-                <div class="mega-menu absolute top-16 left-1/2 -translate-x-1/2 w-[720px] bg-white border border-gray-100 shadow-2xl shadow-gray-200/50 rounded-2xl p-8 z-50 animate-slide-down">
+                <div class="mega-menu fixed top-16 left-0 right-0 mx-auto w-[720px] bg-white border border-gray-100 shadow-2xl shadow-gray-200/50 rounded-2xl p-8 z-50 animate-slide-down">
                     <div class="grid grid-cols-4 gap-8">
                         <div>
                             <h4 class="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-4 font-semibold">Core Business</h4>
