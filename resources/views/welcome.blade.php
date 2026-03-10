@@ -33,79 +33,45 @@
             </a>
         </div>
 
-        {{-- Dashboard Mockup --}}
+        {{-- Dashboard Mockup Slideshow --}}
         <div class="relative max-w-5xl mx-auto animate-fade-in-up delay-400">
             <div class="absolute -inset-4 bg-gradient-to-r from-brand/10 via-cyan-400/10 to-brand/10 rounded-3xl blur-2xl"></div>
             <div class="relative rounded-2xl border border-gray-200 shadow-2xl shadow-gray-200/50 overflow-hidden bg-white">
-                <div class="h-10 border-b border-gray-100 bg-gray-50/50 flex items-center px-4 gap-2">
-                    <div class="w-3 h-3 rounded-full bg-red-300"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-300"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-300"></div>
-                    <span class="ml-4 text-xs text-gray-400 font-light">app.bojeri.com — Dashboard</span>
-                </div>
-                <div class="p-4 md:p-8 bg-white min-h-[380px] flex">
-                    {{-- Mock Sidebar --}}
-                    <div class="w-1/5 border-r border-gray-100 pr-6 hidden md:block">
-                        <div class="h-5 w-full bg-brand/10 rounded mb-6"></div>
-                        <div class="space-y-3">
-                            <div class="h-3 w-3/4 bg-brand/20 rounded"></div>
-                            <div class="h-3 w-1/2 bg-gray-100 rounded"></div>
-                            <div class="h-3 w-2/3 bg-gray-100 rounded"></div>
-                            <div class="h-3 w-1/2 bg-gray-100 rounded"></div>
-                            <div class="h-3 w-3/5 bg-gray-100 rounded"></div>
-                        </div>
-                    </div>
-                    {{-- Mock Content --}}
-                    <div class="flex-1 md:pl-8">
-                        <div class="flex justify-between items-center mb-8">
-                            <div class="h-6 w-40 bg-gray-100 rounded"></div>
-                            <div class="flex gap-2">
-                                <div class="h-8 w-24 border border-gray-100 rounded-lg"></div>
-                                <div class="h-8 w-8 bg-brand/10 rounded-lg"></div>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-4 gap-4 mb-8">
-                            <div class="h-20 border border-gray-100 rounded-xl p-3">
-                                <div class="h-2 w-1/2 bg-gray-100 rounded mb-2"></div>
-                                <div class="h-4 w-3/4 bg-brand/10 rounded"></div>
-                            </div>
-                            <div class="h-20 border border-gray-100 rounded-xl p-3">
-                                <div class="h-2 w-1/2 bg-gray-100 rounded mb-2"></div>
-                                <div class="h-4 w-3/4 bg-emerald-50 rounded"></div>
-                            </div>
-                            <div class="h-20 border border-gray-100 rounded-xl p-3">
-                                <div class="h-2 w-1/2 bg-gray-100 rounded mb-2"></div>
-                                <div class="h-4 w-3/4 bg-cyan-50 rounded"></div>
-                            </div>
-                            <div class="h-20 border border-gray-100 rounded-xl p-3">
-                                <div class="h-2 w-1/2 bg-gray-100 rounded mb-2"></div>
-                                <div class="h-4 w-3/4 bg-amber-50 rounded"></div>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="flex-1 h-40 bg-gray-50 rounded-xl p-4">
-                                <div class="flex items-end gap-2 h-full pb-4">
-                                    <div class="w-full h-1/3 bg-brand/20 rounded-t"></div>
-                                    <div class="w-full h-2/3 bg-brand/40 rounded-t"></div>
-                                    <div class="w-full h-1/2 bg-brand rounded-t"></div>
-                                    <div class="w-full h-3/4 bg-brand rounded-t"></div>
-                                    <div class="w-full h-1/3 bg-brand/30 rounded-t"></div>
-                                    <div class="w-full h-2/3 bg-brand/60 rounded-t"></div>
-                                </div>
-                            </div>
-                            <div class="w-1/3 h-40 bg-gray-50 rounded-xl p-4 hidden lg:block">
-                                <div class="space-y-3">
-                                    <div class="flex items-center gap-2"><div class="w-2 h-2 bg-brand rounded-full"></div><div class="h-2 w-2/3 bg-gray-200 rounded"></div></div>
-                                    <div class="flex items-center gap-2"><div class="w-2 h-2 bg-emerald-400 rounded-full"></div><div class="h-2 w-1/2 bg-gray-200 rounded"></div></div>
-                                    <div class="flex items-center gap-2"><div class="w-2 h-2 bg-cyan-400 rounded-full"></div><div class="h-2 w-3/4 bg-gray-200 rounded"></div></div>
-                                    <div class="flex items-center gap-2"><div class="w-2 h-2 bg-amber-400 rounded-full"></div><div class="h-2 w-1/3 bg-gray-200 rounded"></div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                {{-- Images Slideshow --}}
+                <div class="relative w-full bg-gray-50">
+                    <!-- Invisible placeholder to set container height based on image aspect ratio -->
+                    <img src="{{ asset('assets/account-dashboard.webp') }}" class="w-full h-auto invisible pointer-events-none" aria-hidden="true" alt="">
+                    
+                    <img src="{{ asset('assets/account-dashboard.webp') }}" class="w-full h-auto absolute top-0 left-0 transition-opacity duration-1000 ease-in-out dashboard-slide opacity-100" alt="Account Dashboard">
+                    <img src="{{ asset('assets/crm-dashboard.webp') }}" class="w-full h-auto absolute top-0 left-0 transition-opacity duration-1000 ease-in-out dashboard-slide opacity-0" alt="CRM Dashboard">
+                    <img src="{{ asset('assets/hrm-dashboard.webp') }}" class="w-full h-auto absolute top-0 left-0 transition-opacity duration-1000 ease-in-out dashboard-slide opacity-0" alt="HRM Dashboard">
+                    <img src="{{ asset('assets/pos-dashboard.webp') }}" class="w-full h-auto absolute top-0 left-0 transition-opacity duration-1000 ease-in-out dashboard-slide opacity-0" alt="POS Dashboard">
+                    <img src="{{ asset('assets/project-dashboard.webp') }}" class="w-full h-auto absolute top-0 left-0 transition-opacity duration-1000 ease-in-out dashboard-slide opacity-0" alt="Project Dashboard">
                 </div>
             </div>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const slides = document.querySelectorAll('.dashboard-slide');
+                if (!slides.length) return;
+                
+                let currentSlide = 0;
+                
+                setInterval(() => {
+                    // Fade out current slide
+                    slides[currentSlide].classList.remove('opacity-100');
+                    slides[currentSlide].classList.add('opacity-0');
+                    
+                    // Increment and wrap around
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    
+                    // Fade in next slide
+                    slides[currentSlide].classList.remove('opacity-0');
+                    slides[currentSlide].classList.add('opacity-100');
+                }, 4000); // Change image every 4 seconds
+            });
+        </script>
     </section>
 
     {{-- ============================================ --}}
