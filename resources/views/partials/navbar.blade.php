@@ -3,10 +3,9 @@
     <div class="container mx-auto px-6 flex justify-between items-center">
         <!-- Brand -->
         <a href="/" class="flex items-center gap-2.5" id="brand-logo">
-            <div class="w-8 h-8 bg-brand rounded-lg flex items-center justify-center shadow-sm shadow-brand/20">
-                <span class="material-symbols-outlined text-white text-lg">deployed_code</span>
-            </div>
-            <span class="text-xl font-semibold tracking-tight text-gray-900">Bojeri</span>
+            <div class="h-10">
+                <img src="{{ asset('assets/logo.png') }}" class="object-fit w-full h-full">
+            </div>  
         </a>
 
         <!-- Desktop Nav -->

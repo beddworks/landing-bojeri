@@ -6,6 +6,13 @@
     <title>@yield('title', 'Bojeri — All-in-One ERP Platform')</title>
     <meta name="description" content="@yield('meta_description', 'Bojeri brings invoicing, accounting, HR, projects, CRM, and POS into one platform. Stop stitching tools together.')"/>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon/favicon.ico') }}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}"/>
+    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}"/>
+
     <!-- Tailwind CSS v3 with plugins -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
