@@ -25,11 +25,11 @@
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up delay-300">
-            <a href="/register" class="bg-brand text-white font-semibold px-8 py-3.5 rounded-full hover:shadow-xl hover:shadow-brand/20 transition-all text-sm" id="hero-cta-trial">
+            <a href="https://app.bojeri.com/register" class="bg-brand text-white font-semibold px-8 py-3.5 rounded-full hover:shadow-xl hover:shadow-brand/20 transition-all text-sm" id="hero-cta-trial">
                 @lang('front.hero.cta_trial')
             </a>
-            <a href="/features" class="border border-gray-200 text-gray-700 font-medium px-8 py-3.5 rounded-full hover:border-brand hover:text-brand transition-all text-sm" id="hero-cta-features">
-                @lang('front.hero.cta_features')
+            <a href="https://app.bojeri.com/login?email=demo@bojeri.com&password=password12345" class="border border-gray-200 text-gray-700 font-medium px-8 py-3.5 rounded-full hover:border-brand hover:text-brand transition-all text-sm" id="hero-cta-features">
+                @lang('front.hero.cta_demo')
             </a>
         </div>
 
@@ -216,7 +216,7 @@
                 </div>
                 <h3 class="text-lg font-medium mb-2 text-gray-900">@lang('front.modules_grid.accounting_title')</h3>
                 <p class="text-sm text-gray-500 leading-relaxed font-light mb-6">@lang('front.modules_grid.accounting_desc')</p>
-                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/features">
+                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/docs">
                     @lang('front.modules_grid.learn_more') <span class="w-4 h-px bg-gray-300 group-hover:bg-brand transition-colors"></span>
                 </a>
             </div>
@@ -235,7 +235,7 @@
                 </div>
                 <h3 class="text-lg font-medium mb-2 text-gray-900">@lang('front.modules_grid.hrm_title')</h3>
                 <p class="text-sm text-gray-500 leading-relaxed font-light mb-6">@lang('front.modules_grid.hrm_desc')</p>
-                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/features">
+                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/docs">
                     @lang('front.modules_grid.learn_more') <span class="w-4 h-px bg-gray-300 group-hover:bg-brand transition-colors"></span>
                 </a>
             </div>
@@ -253,7 +253,7 @@
                 </div>
                 <h3 class="text-lg font-medium mb-2 text-gray-900">@lang('front.modules_grid.crm_title')</h3>
                 <p class="text-sm text-gray-500 leading-relaxed font-light mb-6">@lang('front.modules_grid.crm_desc')</p>
-                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/features">
+                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/docs">
                     @lang('front.modules_grid.learn_more') <span class="w-4 h-px bg-gray-300 group-hover:bg-brand transition-colors"></span>
                 </a>
             </div>
@@ -272,7 +272,7 @@
                 </div>
                 <h3 class="text-lg font-medium mb-2 text-gray-900">@lang('front.modules_grid.pos_title')</h3>
                 <p class="text-sm text-gray-500 leading-relaxed font-light mb-6">@lang('front.modules_grid.pos_desc')</p>
-                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/features">
+                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/docs">
                     @lang('front.modules_grid.learn_more') <span class="w-4 h-px bg-gray-300 group-hover:bg-brand transition-colors"></span>
                 </a>
             </div>
@@ -289,7 +289,7 @@
                 </div>
                 <h3 class="text-lg font-medium mb-2 text-gray-900">@lang('front.modules_grid.projects_title')</h3>
                 <p class="text-sm text-gray-500 leading-relaxed font-light mb-6">@lang('front.modules_grid.projects_desc')</p>
-                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/features">
+                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/docs">
                     @lang('front.modules_grid.learn_more') <span class="w-4 h-px bg-gray-300 group-hover:bg-brand transition-colors"></span>
                 </a>
             </div>
@@ -309,14 +309,14 @@
                 </div>
                 <h3 class="text-lg font-medium mb-2 text-gray-900">@lang('front.modules_grid.purchase_title')</h3>
                 <p class="text-sm text-gray-500 leading-relaxed font-light mb-6">@lang('front.modules_grid.purchase_desc')</p>
-                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/features">
+                <a class="text-xs tracking-widest uppercase font-semibold text-gray-400 group-hover:text-brand transition-colors inline-flex items-center gap-2" href="/docs">
                     @lang('front.modules_grid.learn_more') <span class="w-4 h-px bg-gray-300 group-hover:bg-brand transition-colors"></span>
                 </a>
             </div>
         </div>
 
         <div class="text-center mt-10">
-            <a href="/features" class="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:underline" id="see-all-modules">
+            <a href="/docs" class="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:underline" id="see-all-modules">
                 @lang('front.modules_grid.see_all') <span class="material-symbols-outlined text-lg">arrow_forward</span>
             </a>
         </div>
@@ -378,29 +378,6 @@
         </div>
     </section>
 
-    {{-- ============================================ --}}
-    {{-- STATISTICS --}}
-    {{-- ============================================ --}}
-    <section class="container mx-auto px-6 mb-32" id="stats">
-        <div class="grid md:grid-cols-4 gap-8 py-16 border-y border-gray-100">
-            <div class="text-center">
-                <div class="text-5xl font-extralight text-gray-900 mb-1">16</div>
-                <div class="text-xs uppercase tracking-[0.2em] text-gray-400 font-semibold">@lang('front.stats.modules')</div>
-            </div>
-            <div class="text-center">
-                <div class="text-5xl font-extralight text-gray-900 mb-1">5</div>
-                <div class="text-xs uppercase tracking-[0.2em] text-gray-400 font-semibold">@lang('front.stats.dashboards')</div>
-            </div>
-            <div class="text-center">
-                <div class="text-5xl font-extralight text-gray-900 mb-1">0</div>
-                <div class="text-xs uppercase tracking-[0.2em] text-gray-400 font-semibold">@lang('front.stats.integrations')</div>
-            </div>
-            <div class="text-center">
-                <div class="text-5xl font-extralight text-gray-900 mb-1">∞</div>
-                <div class="text-xs uppercase tracking-[0.2em] text-gray-400 font-semibold">@lang('front.stats.languages')</div>
-            </div>
-        </div>
-    </section>
 
     {{-- ============================================ --}}
     {{-- TESTIMONIALS --}}
@@ -781,7 +758,7 @@
                 ['icon' => 'assignment',     'label' => __('front.strip.projects')],
                 ['icon' => 'favorite',       'label' => __('front.strip.crm')],
                 ['icon' => 'point_of_sale',  'label' => __('front.strip.pos')],
-                ['icon' => 'help_center',    'label' => __('front.strip.helpdesk')],
+                ['icon' => 'chat',           'label' => __('front.strip.messenger')],
             ];
             @endphp
             @foreach($strips as $strip)

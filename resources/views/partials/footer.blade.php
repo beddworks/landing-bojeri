@@ -11,11 +11,11 @@
                     @lang('front.footer.cta_desc')
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/register" class="bg-white text-brand font-semibold px-8 py-3.5 rounded-full hover:shadow-xl transition-all text-sm" id="footer-cta-trial">
+                    <a href="https://app.bojeri.com/register" class="bg-white text-brand font-semibold px-8 py-3.5 rounded-full hover:shadow-xl transition-all text-sm" id="footer-cta-trial">
                         @lang('front.footer.cta_trial')
                     </a>
-                    <a href="/features" class="border border-white/30 text-white font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition-all text-sm" id="footer-cta-demo">
-                        @lang('front.footer.cta_features')
+                    <a href="https://app.bojeri.com/login?email=demo@bojeri.com&password=password12345" class="border border-white/30 text-white font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition-all text-sm" id="footer-cta-demo">
+                        @lang('front.footer.cta_demo')
                     </a>
                 </div>
             </div>
@@ -47,7 +47,7 @@
             <div>
                 <h5 class="text-xs font-semibold uppercase tracking-widest text-gray-900 mb-5">@lang('front.footer.platform')</h5>
                 <ul class="space-y-3 text-sm text-gray-500 font-light">
-                    <li><a class="hover:text-brand transition-colors" href="/features">@lang('front.footer.all_features')</a></li>
+                    <li><a class="hover:text-brand transition-colors" href="/docs">@lang('front.footer.all_features')</a></li>
                     <li><a class="hover:text-brand transition-colors" href="/docs">@lang('front.footer.documentation')</a></li>
                     <li><a class="hover:text-brand transition-colors" href="/articles">@lang('front.footer.articles')</a></li>
                     <li><a class="hover:text-brand transition-colors" href="#">@lang('front.footer.changelog')</a></li>

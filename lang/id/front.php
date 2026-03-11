@@ -9,9 +9,9 @@ return [
     */
     'meta' => [
         'home_title'        => 'Bojeri — Kelola Seluruh Bisnis Anda dari Satu Platform',
-        'home_description'  => 'Bojeri mengintegrasikan faktur, pembelian, akuntansi, HR, proyek, CRM, dan POS dalam satu workspace. Satu platform, semua departemen, tanpa silo data.',
+        'home_description'  => 'Bojeri mengintegrasikan faktur, pembelian, akuntansi, HR, proyek, CRM, dan POS dalam satu workspace. Satu platform untuk semua departemen.',
         'docs_title'        => 'Dokumentasi — Platform ERP Bojeri',
-        'docs_description'  => 'Dokumentasi lengkap untuk seluruh 16 modul ERP Bojeri. Pelajari Akuntansi, HRM, CRM, POS, Proyek, dan masih banyak lagi.',
+        'docs_description'  => 'Dokumentasi lengkap untuk setiap modul Bojeri — Akuntansi, HRM, CRM, POS, Proyek, dan masih banyak lagi. Mulai dengan cepat dan mudah.',
         'articles_title'    => 'Artikel & Wawasan — Bojeri ERP',
         'articles_description' => 'Baca artikel terbaru, panduan strategi bisnis, dan studi kasus dari tim Bojeri ERP.',
         'privacy_title'     => 'Kebijakan Privasi — Bojeri',
@@ -22,6 +22,7 @@ return [
         'cookies_description' => 'Kelola preferensi cookie Anda untuk platform ERP Bojeri.',
         'default_title'     => 'Bojeri — Platform ERP Semua dalam Satu',
         'default_description' => 'Bojeri mengintegrasikan faktur, akuntansi, HR, proyek, CRM, dan POS dalam satu platform. Hentikan kerumitan menghubungkan berbagai alat.',
+        'keywords'          => 'software ERP, platform manajemen bisnis, faktur, akuntansi, HRM, CRM, POS, manajemen proyek, ERP terpadu, Bojeri',
     ],
 
     /*
@@ -67,9 +68,9 @@ return [
         'badge'             => 'PLATFORM ERP SEMUA DALAM SATU',
         'title_line1'       => 'Kelola Seluruh Bisnis Anda',
         'title_line2'       => 'Dari Satu Platform.',
-        'subtitle'          => 'Bojeri mengintegrasikan faktur, pembelian, akuntansi, HR, proyek, CRM, dan POS ke dalam satu workspace — sehingga tim Anda bekerja lebih cepat, data tetap terhubung, dan setiap keputusan bisnis didasarkan pada gambaran lengkap.',
+        'subtitle'          => 'Bojeri mengintegrasikan faktur, pembelian, akuntansi, HR, proyek, CRM, dan POS ke dalam satu workspace — sehingga tim Anda bekerja lebih cepat, data tetap terhubung, dan setiap keputusan bisnis didasarkan pada data lengkap.',
         'cta_trial'         => 'Mulai Uji Coba Gratis',
-        'cta_features'      => 'Lihat Semua Fitur →',
+        'cta_demo'      => 'Coba Demo →',
         'img_account_dashboard' => 'Dashboard Akun',
         'img_crm_dashboard' => 'Dashboard CRM',
         'img_hrm_dashboard' => 'Dashboard HRM',
@@ -92,7 +93,7 @@ return [
         'construction_name' => 'Konstruksi',
         'construction_desc' => 'Proyek, pembelian, HRM',
         'it_name'           => 'IT & Perangkat Lunak',
-        'it_desc'           => 'Proyek, helpdesk, CRM',
+        'it_desc'           => 'Proyek, CRM, proposal',
         'logistics_name'    => 'Logistik & Distribusi',
         'logistics_desc'    => 'Gudang, transfer, akuntansi',
         'hr_name'           => 'HR & Staffing',
@@ -116,7 +117,7 @@ return [
         'manufacturing_name' => 'Manufaktur',
         'manufacturing_desc' => 'Pembelian, gudang, penggajian',
         'financial_name'    => 'Jasa Keuangan',
-        'financial_desc'    => 'Akuntansi, CRM, langganan',
+        'financial_desc'    => 'Akuntansi, CRM, pelaporan',
     ],
 
     /*
@@ -151,11 +152,11 @@ return [
     |--------------------------------------------------------------------------
     */
     'modules_grid' => [
-        'title'             => '16 modul.',
+        'title'             => 'Semua yang dibutuhkan tim Anda.',
         'title_accent'      => 'Satu platform.',
         'subtitle'          => 'Setiap alur kerja yang dibutuhkan bisnis Anda — dari CRM pertama hingga penutupan akhir bulan — sudah tersedia, terhubung, dan siap digunakan.',
         'learn_more'        => 'Pelajari Lebih Lanjut',
-        'see_all'           => 'Lihat semua 16 modul',
+        'see_all'           => 'Jelajahi semua modul',
         'accounting_title'  => 'Akuntansi',
         'accounting_desc'   => 'Pembukuan double-entry lengkap dengan Chart of Accounts, pendapatan, pengeluaran, transaksi bank, nota kredit & debit, serta laporan keuangan.',
         'hrm_title'         => 'HRM & Penggajian',
@@ -189,7 +190,7 @@ return [
         'bojeri_label'      => 'Platform Bojeri',
         'bojeri_price'      => 'Satu paket',
         'bojeri_price_suffix' => ', satu harga',
-        'bojeri_modules'    => 'Semua 16 modul • Tanpa integrasi tambahan',
+        'bojeri_modules'    => 'Semua modul termasuk • Tanpa integrasi tambahan',
         'bojeri_pro1'       => 'Satu sumber kebenaran data',
         'bojeri_pro2'       => 'Satu sistem izin terpadu',
         'bojeri_pro3'       => 'Semua data di database Anda',
@@ -301,7 +302,7 @@ return [
         'projects'          => 'Proyek',
         'crm'               => 'CRM',
         'pos'               => 'POS',
-        'helpdesk'          => 'Helpdesk',
+        'messenger'         => 'Pesan',
     ],
 
     /*
@@ -313,7 +314,7 @@ return [
         'cta_title'         => 'Hentikan ketergantungan pada banyak alat.',
         'cta_desc'          => 'Bergabunglah dengan bisnis yang menjalankan faktur, akuntansi, HR, proyek, CRM, dan POS dari satu platform terpadu.',
         'cta_trial'         => 'Mulai Uji Coba Gratis',
-        'cta_features'      => 'Lihat Semua Fitur',
+        'cta_demo'      => 'Coba Demo',
         'tagline'           => 'Platform ERP modular dan multi-tenant yang dirancang untuk bisnis yang berkembang. Semua yang dibutuhkan tim Anda, dalam satu tempat.',
         'platform'          => 'Platform',
         'all_features'      => 'Semua Fitur',
@@ -345,13 +346,13 @@ return [
         'search_placeholder' => 'Cari dokumentasi...',
         'browse_modules'     => 'Telusuri Modul',
         'modules_heading'    => 'Modul',
-        'badge'              => '16 MODUL',
+        'badge'              => '12 MODUL',
         'title'              => 'Dokumentasi',
         'subtitle'           => 'Semua yang perlu Anda ketahui tentang setiap modul Bojeri — dari pengaturan awal hingga penggunaan sehari-hari. Klik modul mana saja di bawah ini atau telusuri sidebar.',
         'toc_label'          => 'Modul',
         'module_label_prefix' => 'Modul',
         'ready_title'        => 'Siap untuk mencoba?',
-        'ready_desc'         => 'Mulai uji coba gratis Anda dan dapatkan akses ke semua 16 modul.',
+        'ready_desc'         => 'Mulai uji coba gratis dan akses semua modul sekaligus — tanpa biaya tambahan, tanpa kejutan.',
         'ready_cta'          => 'Mulai Uji Coba Gratis',
 
         // Sidebar menu labels

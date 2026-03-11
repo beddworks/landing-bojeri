@@ -181,37 +181,9 @@
                         ]
                     ],
                     [
-                        'id' => 'media-library',
-                        'icon' => 'image',
-                        'label' => __('front.docs.menu_media_library'),
-                        'children' => []
-                    ],
-                    [
                         'id' => 'messenger',
                         'icon' => 'chat',
                         'label' => __('front.docs.menu_messenger'),
-                        'children' => []
-                    ],
-                    [
-                        'id' => 'helpdesk',
-                        'icon' => 'help_center',
-                        'label' => __('front.docs.menu_helpdesk'),
-                        'children' => []
-                    ],
-                    [
-                        'id' => 'plan',
-                        'icon' => 'credit_card',
-                        'label' => __('front.docs.menu_plan'),
-                        'children' => [
-                            ['id' => 'setup-subscription-plan', 'label' => __('front.docs.menu_subscription_plan')],
-                            ['id' => 'bank-transfer-requests', 'label' => __('front.docs.menu_bank_transfer_requests')],
-                            ['id' => 'orders', 'label' => __('front.docs.menu_orders')],
-                        ]
-                    ],
-                    [
-                        'id' => 'settings',
-                        'icon' => 'settings',
-                        'label' => __('front.docs.menu_settings'),
                         'children' => []
                     ],
                 ];
@@ -486,19 +458,6 @@
                     ]
                 ],
                 [
-                    'id' => 'media-library',
-                    'icon' => 'image',
-                    'title' => __('front.docs.mod_media_title'),
-                    'tagline' => __('front.docs.mod_media_tagline'),
-                    'description' => __('front.docs.mod_media_desc'),
-                    'features' => [
-                        ['icon' => 'upload_file', 'title' => __('front.docs.mod_media_feat1_title'), 'desc' => __('front.docs.mod_media_feat1_desc')],
-                        ['icon' => 'folder', 'title' => __('front.docs.mod_media_feat2_title'), 'desc' => __('front.docs.mod_media_feat2_desc')],
-                        ['icon' => 'cloud', 'title' => __('front.docs.mod_media_feat3_title'), 'desc' => __('front.docs.mod_media_feat3_desc')],
-                        ['icon' => 'lock', 'title' => __('front.docs.mod_media_feat4_title'), 'desc' => __('front.docs.mod_media_feat4_desc')],
-                    ]
-                ],
-                [
                     'id' => 'messenger',
                     'icon' => 'chat',
                     'title' => __('front.docs.mod_messenger_title'),
@@ -509,45 +468,6 @@
                         ['icon' => 'attach_file', 'title' => __('front.docs.mod_messenger_feat2_title'), 'desc' => __('front.docs.mod_messenger_feat2_desc')],
                         ['icon' => 'visibility', 'title' => __('front.docs.mod_messenger_feat3_title'), 'desc' => __('front.docs.mod_messenger_feat3_desc')],
                         ['icon' => 'circle', 'title' => __('front.docs.mod_messenger_feat4_title'), 'desc' => __('front.docs.mod_messenger_feat4_desc')],
-                    ]
-                ],
-                [
-                    'id' => 'helpdesk',
-                    'icon' => 'help_center',
-                    'title' => __('front.docs.mod_helpdesk_title'),
-                    'tagline' => __('front.docs.mod_helpdesk_tagline'),
-                    'description' => __('front.docs.mod_helpdesk_desc'),
-                    'features' => [
-                        ['icon' => 'confirmation_number', 'title' => __('front.docs.mod_helpdesk_feat1_title'), 'desc' => __('front.docs.mod_helpdesk_feat1_desc')],
-                        ['icon' => 'forum', 'title' => __('front.docs.mod_helpdesk_feat2_title'), 'desc' => __('front.docs.mod_helpdesk_feat2_desc')],
-                        ['icon' => 'visibility_off', 'title' => __('front.docs.mod_helpdesk_feat3_title'), 'desc' => __('front.docs.mod_helpdesk_feat3_desc')],
-                        ['icon' => 'timer', 'title' => __('front.docs.mod_helpdesk_feat4_title'), 'desc' => __('front.docs.mod_helpdesk_feat4_desc')],
-                    ]
-                ],
-                [
-                    'id' => 'plan',
-                    'icon' => 'credit_card',
-                    'title' => __('front.docs.mod_subscriptions_title'),
-                    'tagline' => __('front.docs.mod_subscriptions_tagline'),
-                    'description' => __('front.docs.mod_subscriptions_desc'),
-                    'features' => [
-                        ['icon' => 'tune', 'title' => __('front.docs.mod_subscriptions_feat1_title'), 'desc' => __('front.docs.mod_subscriptions_feat1_desc')],
-                        ['icon' => 'payment', 'title' => __('front.docs.mod_subscriptions_feat2_title'), 'desc' => __('front.docs.mod_subscriptions_feat2_desc')],
-                        ['icon' => 'local_offer', 'title' => __('front.docs.mod_subscriptions_feat3_title'), 'desc' => __('front.docs.mod_subscriptions_feat3_desc')],
-                        ['icon' => 'rocket_launch', 'title' => __('front.docs.mod_subscriptions_feat4_title'), 'desc' => __('front.docs.mod_subscriptions_feat4_desc')],
-                    ]
-                ],
-                [
-                    'id' => 'settings',
-                    'icon' => 'settings',
-                    'title' => __('front.docs.mod_settings_title'),
-                    'tagline' => __('front.docs.mod_settings_tagline'),
-                    'description' => __('front.docs.mod_settings_desc'),
-                    'features' => [
-                        ['icon' => 'palette', 'title' => __('front.docs.mod_settings_feat1_title'), 'desc' => __('front.docs.mod_settings_feat1_desc')],
-                        ['icon' => 'email', 'title' => __('front.docs.mod_settings_feat2_title'), 'desc' => __('front.docs.mod_settings_feat2_desc')],
-                        ['icon' => 'translate', 'title' => __('front.docs.mod_settings_feat3_title'), 'desc' => __('front.docs.mod_settings_feat3_desc')],
-                        ['icon' => 'travel_explore', 'title' => __('front.docs.mod_settings_feat4_title'), 'desc' => __('front.docs.mod_settings_feat4_desc')],
                     ]
                 ],
             ];

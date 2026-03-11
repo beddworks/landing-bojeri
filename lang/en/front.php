@@ -9,9 +9,9 @@ return [
     */
     'meta' => [
         'home_title'        => 'Bojeri — Run Your Entire Business From One Platform',
-        'home_description'  => 'Bojeri brings invoicing, purchasing, accounting, HR, projects, CRM, and POS into a single workspace. One platform, every department, zero data silos.',
+        'home_description'  => 'Bojeri brings invoicing, purchasing, accounting, HR, projects, CRM, and POS into a single workspace. One platform for every department',
         'docs_title'        => 'Documentation — Bojeri ERP Platform',
-        'docs_description'  => 'Comprehensive documentation for all 16 Bojeri ERP modules. Learn Accounting, HRM, CRM, POS, Projects, and more.',
+        'docs_description'  => 'Complete documentation for every Bojeri module — Accounting, HRM, CRM, POS, Projects, and more. Get up and running fast.',
         'articles_title'    => 'Articles & Insights — Bojeri ERP',
         'articles_description' => 'Read the latest articles, business strategy guides, and case studies from the Bojeri ERP team.',
         'privacy_title'     => 'Privacy Policy — Bojeri',
@@ -22,6 +22,7 @@ return [
         'cookies_description' => 'Manage your cookie preferences for the Bojeri ERP platform.',
         'default_title'     => 'Bojeri — All-in-One ERP Platform',
         'default_description' => 'Bojeri brings invoicing, accounting, HR, projects, CRM, and POS into one platform. Stop stitching tools together.',
+        'keywords'          => 'ERP software, business management platform, invoicing, accounting, HRM, CRM, POS, project management, all-in-one ERP, Bojeri',
     ],
 
     /*
@@ -67,9 +68,9 @@ return [
         'badge'             => 'ALL-IN-ONE ERP PLATFORM',
         'title_line1'       => 'Run Your Entire Business',
         'title_line2'       => 'From One Platform.',
-        'subtitle'          => 'Bojeri brings your invoicing, purchasing, accounting, HR, projects, CRM, and point-of-sale into a single workspace — so your team works faster, your data stays connected, and your business decisions are based on the full picture.',
+        'subtitle'          => 'Bojeri brings your invoicing, purchasing, accounting, HR, projects, CRM, and point-of-sale into a single workspace — so your team works faster, your data stays connected, and your business decisions are based on the full data.',
         'cta_trial'         => 'Start Free Trial',
-        'cta_features'      => 'See All Features →',
+        'cta_demo'      => 'Try Demo →',
         'img_account_dashboard' => 'Account Dashboard',
         'img_crm_dashboard' => 'CRM Dashboard',
         'img_hrm_dashboard' => 'HRM Dashboard',
@@ -92,7 +93,7 @@ return [
         'construction_name' => 'Construction',
         'construction_desc' => 'Projects, purchase, HRM',
         'it_name'           => 'IT & Software',
-        'it_desc'           => 'Projects, helpdesk, CRM',
+        'it_desc'           => 'Projects, CRM, proposals',
         'logistics_name'    => 'Logistics & Distribution',
         'logistics_desc'    => 'Warehouses, transfers, accounting',
         'hr_name'           => 'HR & Staffing',
@@ -116,7 +117,7 @@ return [
         'manufacturing_name' => 'Manufacturing',
         'manufacturing_desc' => 'Purchase, warehouse, payroll',
         'financial_name'    => 'Financial Services',
-        'financial_desc'    => 'Accounting, CRM, subscriptions',
+        'financial_desc'    => 'Accounting, CRM, reporting',
     ],
 
     /*
@@ -151,11 +152,11 @@ return [
     |--------------------------------------------------------------------------
     */
     'modules_grid' => [
-        'title'             => '16 modules.',
+        'title'             => 'Every tool your team needs.',
         'title_accent'      => 'One platform.',
         'subtitle'          => 'Every workflow your business needs — from first-contact CRM to month-end close — built in, connected, and ready.',
         'learn_more'        => 'Learn More',
-        'see_all'           => 'See all 16 modules',
+        'see_all'           => 'Explore all modules',
         'accounting_title'  => 'Accounting',
         'accounting_desc'   => 'Full double-entry bookkeeping with Chart of Accounts, revenue, expenses, bank transactions, credit & debit notes, and financial reports.',
         'hrm_title'         => 'HRM & Payroll',
@@ -189,7 +190,7 @@ return [
         'bojeri_label'      => 'The Bojeri Platform',
         'bojeri_price'      => 'One plan',
         'bojeri_price_suffix' => ', one price',
-        'bojeri_modules'    => 'All 16 modules • Zero integrations needed',
+        'bojeri_modules'    => 'All modules included • Zero integrations needed',
         'bojeri_pro1'       => 'Single source of truth',
         'bojeri_pro2'       => 'One permission system',
         'bojeri_pro3'       => 'All data in your database',
@@ -301,7 +302,7 @@ return [
         'projects'          => 'Projects',
         'crm'               => 'CRM',
         'pos'               => 'POS',
-        'helpdesk'          => 'Helpdesk',
+        'messenger'         => 'Messenger',
     ],
 
     /*
@@ -313,7 +314,7 @@ return [
         'cta_title'         => 'Stop stitching tools together.',
         'cta_desc'          => 'Join businesses that run invoicing, accounting, HR, projects, CRM, and POS from a single platform.',
         'cta_trial'         => 'Start Free Trial',
-        'cta_features'      => 'See All Features',
+        'cta_demo'      => 'Try Demo',
         'tagline'           => 'A modular, multi-tenant ERP platform built for growing businesses. Everything your team needs, in one place.',
         'platform'          => 'Platform',
         'all_features'      => 'All Features',
@@ -345,13 +346,13 @@ return [
         'search_placeholder' => 'Search docs...',
         'browse_modules'     => 'Browse Modules',
         'modules_heading'    => 'Modules',
-        'badge'              => '16 MODULES',
+        'badge'              => '12 MODULES',
         'title'              => 'Documentation',
         'subtitle'           => 'Everything you need to know about every Bojeri module — from setup to daily use. Click any module below or browse the sidebar.',
         'toc_label'          => 'Modules',
         'module_label_prefix' => 'Module',
         'ready_title'        => 'Ready to explore?',
-        'ready_desc'         => 'Start your free trial and get access to all 16 modules.',
+        'ready_desc'         => 'Start your free trial and get access to every module — no add-ons, no surprises.',
         'ready_cta'          => 'Start Free Trial',
 
         // Sidebar menu labels

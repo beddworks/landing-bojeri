@@ -51,9 +51,6 @@
                             <h4 class="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-4 font-semibold">@lang('front.nav.communication')</h4>
                             <ul class="space-y-3 text-[13px] text-gray-600">
                                 <li><a href="/docs#messenger" class="hover:text-brand transition-colors flex items-center gap-2"><span class="material-symbols-outlined text-brand/60 text-[16px]">chat</span> @lang('front.nav.messenger')</a></li>
-                                <li><a href="/docs#helpdesk" class="hover:text-brand transition-colors flex items-center gap-2"><span class="material-symbols-outlined text-brand/60 text-[16px]">help_center</span> @lang('front.nav.helpdesk')</a></li>
-                                <li><a href="/docs#media-library" class="hover:text-brand transition-colors flex items-center gap-2"><span class="material-symbols-outlined text-brand/60 text-[16px]">image</span> @lang('front.nav.media_library')</a></li>
-                                <li><a href="/docs#plan" class="hover:text-brand transition-colors flex items-center gap-2"><span class="material-symbols-outlined text-brand/60 text-[16px]">credit_card</span> @lang('front.nav.subscriptions')</a></li>
                             </ul>
                         </div>
                     </div>
@@ -67,10 +64,10 @@
 
         <!-- CTA -->
         <div class="flex items-center md:w-64 justify-end gap-3">
-            <a href="/login" class="hidden sm:inline-flex text-sm font-medium text-gray-600 px-5 py-2 rounded-full border border-gray-200 hover:border-brand hover:text-brand transition-all" id="nav-signin">
+            <a href="https://app.bojeri.com/login" class="hidden sm:inline-flex text-sm font-medium text-gray-600 px-5 py-2 rounded-full border border-gray-200 hover:border-brand hover:text-brand transition-all" id="nav-signin">
                 @lang('front.nav.sign_in')
             </a>
-            <a href="/register" class="text-sm font-semibold px-5 py-2 bg-brand text-white rounded-full hover:shadow-lg hover:shadow-brand/20 transition-all" id="nav-cta">
+            <a href="https://app.bojeri.com/register" class="text-sm font-semibold px-5 py-2 bg-brand text-white rounded-full hover:shadow-lg hover:shadow-brand/20 transition-all" id="nav-cta">
                 @lang('front.nav.start_free_trial')
             </a>
             <!-- Mobile hamburger -->
