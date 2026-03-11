@@ -32,7 +32,7 @@
                 <p class="text-sm text-gray-500 font-light leading-relaxed mb-6 max-w-xs">
                     @lang('front.footer.tagline')
                 </p>
-                <div class="flex gap-4">
+                <div class="flex gap-4 hidden">
                     <a class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition-all" href="#" aria-label="@lang('front.footer.twitter_label')">
                         <span class="material-symbols-outlined text-lg">tag</span>
                     </a>
@@ -49,16 +49,16 @@
                 <ul class="space-y-3 text-sm text-gray-500 font-light">
                     <li><a class="hover:text-brand transition-colors" href="/docs">@lang('front.footer.all_features')</a></li>
                     <li><a class="hover:text-brand transition-colors" href="/docs">@lang('front.footer.documentation')</a></li>
-                    <li><a class="hover:text-brand transition-colors" href="/articles">@lang('front.footer.articles')</a></li>
-                    <li><a class="hover:text-brand transition-colors" href="#">@lang('front.footer.changelog')</a></li>
+                    <li class="hidden"><a class="hover:text-brand transition-colors" href="/articles">@lang('front.footer.articles')</a></li>
+                    <li class="hidden"><a class="hover:text-brand transition-colors" href="#">@lang('front.footer.changelog')</a></li>
                 </ul>
             </div>
             <div>
                 <h5 class="text-xs font-semibold uppercase tracking-widest text-gray-900 mb-5">@lang('front.footer.company')</h5>
                 <ul class="space-y-3 text-sm text-gray-500 font-light">
-                    <li><a class="hover:text-brand transition-colors" href="#">@lang('front.footer.about')</a></li>
-                    <li><a class="hover:text-brand transition-colors" href="#">@lang('front.footer.careers')</a></li>
-                    <li><a class="hover:text-brand transition-colors" href="#">@lang('front.footer.contact')</a></li>
+                    <li class="hidden"><a class="hover:text-brand transition-colors" href="#">@lang('front.footer.about')</a></li>
+                    <li class="hidden"><a class="hover:text-brand transition-colors" href="#">@lang('front.footer.careers')</a></li>
+                    <li><a class="hover:text-brand transition-colors" href="https://tawk.to/chat/69b0f49b791b0a1c352a38f2/1jjdjmvvg">@lang('front.footer.contact')</a></li>
                 </ul>
             </div>
             <div>

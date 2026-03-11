@@ -688,7 +688,7 @@
                     <a href="/register" class="w-full py-3 rounded-full bg-brand text-white text-sm font-semibold text-center hover:shadow-lg hover:shadow-brand/20 transition-all block">@lang('front.pricing.cta_starter')</a>
                 </div>
                 <div>
-                    <a href="#contact" class="w-full py-3 rounded-full border border-gray-200 text-sm font-medium text-center hover:bg-gray-50 hover:border-brand transition-all block">@lang('front.pricing.cta_enterprise')</a>
+                    <a href="https://tawk.to/chat/69b0f49b791b0a1c352a38f2/1jjdjmvvg" class="w-full py-3 rounded-full border border-gray-200 text-sm font-medium text-center hover:bg-gray-50 hover:border-brand transition-all block">@lang('front.pricing.cta_enterprise')</a>
                 </div>
             </div>
         </div>
