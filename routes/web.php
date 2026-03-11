@@ -1,14 +1,25 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\App;
 
-// Stitch-designed pages
-Route::get('/', fn () => view('welcome'))->name('home');
-Route::get('/articles', fn () => view('articles'))->name('articles');
-Route::get('/articles/{slug}', fn () => view('article-show'))->name('articles.show');
+Route::get('/lang/{locale}', function ($locale) {
+    $allowed = ['en', 'id'];
+    if (in_array($locale, $allowed)) {
+        Session::put('locale', $locale);
+        App::setLocale($locale);
+    }
+    return redirect()->back()->withHeaders(['Vary' => 'Accept-Language']);
+})->name('lang.switch');
 
-Route::get('/docs', fn () => view('docs'))->name('docs');
-
-Route::get('/privacy',  fn () => view('privacy'))->name('privacy');
-Route::get('/terms',    fn () => view('terms'))->name('terms');
-Route::get('/cookies',  fn () => view('cookies'))->name('cookies');
+Route::controller(FrontController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+    Route::get('/articles', 'articles')->name('articles');
+    Route::get('/articles/{slug}', 'articleShow')->name('articles.show');
+    Route::get('/docs', 'docs')->name('docs');
+    Route::get('/privacy', 'privacy')->name('privacy');
+    Route::get('/terms', 'terms')->name('terms');
+    Route::get('/cookies', 'cookies')->name('cookies');
+});

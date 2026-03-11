@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Documentation — Bojeri ERP Platform')
-@section('meta_description', 'Comprehensive documentation for all 16 Bojeri ERP modules. Learn Accounting, HRM, CRM, POS, Projects, and more.')
+@section('title', __('front.meta.docs_title'))
+@section('meta_description', __('front.meta.docs_description'))
 
 @section('content')
 <div class="pt-16">
@@ -16,7 +16,7 @@
                 {{-- Search --}}
                 <div class="relative mb-6">
                     <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-300 text-lg">search</span>
-                    <input class="w-full rounded-lg border border-gray-100 bg-gray-50/50 py-2 pl-9 pr-3 text-sm outline-none placeholder:text-gray-400 focus:border-brand/40 focus:ring-2 focus:ring-brand/10 transition-all" placeholder="Search docs..." type="text" id="docs-search"/>
+                    <input class="w-full rounded-lg border border-gray-100 bg-gray-50/50 py-2 pl-9 pr-3 text-sm outline-none placeholder:text-gray-400 focus:border-brand/40 focus:ring-2 focus:ring-brand/10 transition-all" placeholder="@lang('front.docs.search_placeholder')" type="text" id="docs-search"/>
                 </div>
 
                 {{-- Nav sections --}}
@@ -25,157 +25,157 @@
                     [
                         'id' => 'dashboard',
                         'icon' => 'dashboard',
-                        'label' => 'Dashboard',
+                        'label' => __('front.docs.menu_dashboard'),
                         'children' => [
-                            ['id' => 'account-dashboard', 'label' => 'Account Dashboard'],
-                            ['id' => 'project-dashboard', 'label' => 'Project Dashboard'],
-                            ['id' => 'hrm-dashboard', 'label' => 'HRM Dashboard'],
-                            ['id' => 'pos-dashboard', 'label' => 'POS Dashboard'],
-                            ['id' => 'crm-dashboard', 'label' => 'CRM Dashboard'],
+                            ['id' => 'account-dashboard', 'label' => __('front.docs.menu_account_dashboard')],
+                            ['id' => 'project-dashboard', 'label' => __('front.docs.menu_project_dashboard')],
+                            ['id' => 'hrm-dashboard', 'label' => __('front.docs.menu_hrm_dashboard')],
+                            ['id' => 'pos-dashboard', 'label' => __('front.docs.menu_pos_dashboard')],
+                            ['id' => 'crm-dashboard', 'label' => __('front.docs.menu_crm_dashboard')],
                         ]
                     ],
                     [
                         'id' => 'user-management',
                         'icon' => 'group',
-                        'label' => 'User Management',
+                        'label' => __('front.docs.menu_user_management'),
                         'children' => [
-                            ['id' => 'roles', 'label' => 'Roles'],
-                            ['id' => 'users', 'label' => 'Users'],
+                            ['id' => 'roles', 'label' => __('front.docs.menu_roles')],
+                            ['id' => 'users', 'label' => __('front.docs.menu_users')],
                         ]
                     ],
                     [
                         'id' => 'proposal',
                         'icon' => 'description',
-                        'label' => 'Proposal',
+                        'label' => __('front.docs.menu_proposal'),
                         'children' => []
                     ],
                     [
                         'id' => 'sales-invoice',
                         'icon' => 'receipt',
-                        'label' => 'Sales Invoice',
+                        'label' => __('front.docs.menu_sales_invoice'),
                         'children' => [
-                            ['id' => 'sales-invoice-list', 'label' => 'Sales Invoice'],
-                            ['id' => 'sales-invoice-returns', 'label' => 'Sales Invoice Returns'],
+                            ['id' => 'sales-invoice-list', 'label' => __('front.docs.menu_sales_invoice_list')],
+                            ['id' => 'sales-invoice-returns', 'label' => __('front.docs.menu_sales_invoice_returns')],
                         ]
                     ],
                     [
                         'id' => 'purchase',
                         'icon' => 'shopping_cart',
-                        'label' => 'Purchase',
+                        'label' => __('front.docs.menu_purchase'),
                         'children' => [
-                            ['id' => 'purchase-invoice', 'label' => 'Purchase Invoice'],
-                            ['id' => 'purchase-returns', 'label' => 'Purchase Returns'],
-                            ['id' => 'warehouses', 'label' => 'Warehouses'],
-                            ['id' => 'purchase-transfers', 'label' => 'Transfers'],
+                            ['id' => 'purchase-invoice', 'label' => __('front.docs.menu_purchase_invoice')],
+                            ['id' => 'purchase-returns', 'label' => __('front.docs.menu_purchase_returns')],
+                            ['id' => 'warehouses', 'label' => __('front.docs.menu_warehouses')],
+                            ['id' => 'purchase-transfers', 'label' => __('front.docs.menu_transfers')],
                         ]
                     ],
                     [
                         'id' => 'product-service',
                         'icon' => 'inventory_2',
-                        'label' => 'Product & Service',
+                        'label' => __('front.docs.menu_product_service'),
                         'children' => [
-                            ['id' => 'items', 'label' => 'Items'],
-                            ['id' => 'product-system-setup', 'label' => 'System Setup'],
+                            ['id' => 'items', 'label' => __('front.docs.menu_items')],
+                            ['id' => 'product-system-setup', 'label' => __('front.docs.menu_system_setup')],
                         ]
                     ],
                     [
                         'id' => 'project',
                         'icon' => 'assignment',
-                        'label' => 'Project',
+                        'label' => __('front.docs.menu_project'),
                         'children' => [
-                            ['id' => 'projects-list', 'label' => 'Projects'],
-                            ['id' => 'projects-report', 'label' => 'Projects Report'],
-                            ['id' => 'project-system-setup', 'label' => 'System Setup'],
+                            ['id' => 'projects-list', 'label' => __('front.docs.menu_projects_list')],
+                            ['id' => 'projects-report', 'label' => __('front.docs.menu_projects_report')],
+                            ['id' => 'project-system-setup', 'label' => __('front.docs.menu_system_setup')],
                         ]
                     ],
                     [
                         'id' => 'accounting',
                         'icon' => 'account_balance',
-                        'label' => 'Accounting',
+                        'label' => __('front.docs.menu_accounting'),
                         'children' => [
-                            ['id' => 'customers', 'label' => 'Customers'],
-                            ['id' => 'vendors', 'label' => 'Vendors'],
+                            ['id' => 'customers', 'label' => __('front.docs.menu_customers')],
+                            ['id' => 'vendors', 'label' => __('front.docs.menu_vendors')],
                             [
                                 'id' => 'banking',
-                                'label' => 'Banking',
+                                'label' => __('front.docs.menu_banking'),
                                 'nested' => [
-                                    ['id' => 'bank-accounts', 'label' => 'Bank Accounts'],
-                                    ['id' => 'bank-transactions', 'label' => 'Bank Transactions'],
-                                    ['id' => 'bank-transfers', 'label' => 'Bank Transfers'],
+                                    ['id' => 'bank-accounts', 'label' => __('front.docs.menu_bank_accounts')],
+                                    ['id' => 'bank-transactions', 'label' => __('front.docs.menu_bank_transactions')],
+                                    ['id' => 'bank-transfers', 'label' => __('front.docs.menu_bank_transfers')],
                                 ]
                             ],
-                            ['id' => 'chart-of-accounts', 'label' => 'Chart Of Accounts'],
-                            ['id' => 'vendor-payments', 'label' => 'Vendor Payments'],
-                            ['id' => 'customer-payments', 'label' => 'Customer Payments'],
-                            ['id' => 'revenue', 'label' => 'Revenue'],
-                            ['id' => 'expense', 'label' => 'Expense'],
-                            ['id' => 'debit-notes', 'label' => 'Debit Notes'],
-                            ['id' => 'credit-notes', 'label' => 'Credit Notes'],
-                            ['id' => 'accounting-reports', 'label' => 'Reports'],
-                            ['id' => 'accounting-system-setup', 'label' => 'System Setup'],
+                            ['id' => 'chart-of-accounts', 'label' => __('front.docs.menu_chart_of_accounts')],
+                            ['id' => 'vendor-payments', 'label' => __('front.docs.menu_vendor_payments')],
+                            ['id' => 'customer-payments', 'label' => __('front.docs.menu_customer_payments')],
+                            ['id' => 'revenue', 'label' => __('front.docs.menu_revenue')],
+                            ['id' => 'expense', 'label' => __('front.docs.menu_expense')],
+                            ['id' => 'debit-notes', 'label' => __('front.docs.menu_debit_notes')],
+                            ['id' => 'credit-notes', 'label' => __('front.docs.menu_credit_notes')],
+                            ['id' => 'accounting-reports', 'label' => __('front.docs.menu_reports')],
+                            ['id' => 'accounting-system-setup', 'label' => __('front.docs.menu_system_setup')],
                         ]
                     ],
                     [
                         'id' => 'hrm',
                         'icon' => 'badge',
-                        'label' => 'HRM',
+                        'label' => __('front.docs.menu_hrm'),
                         'children' => [
-                            ['id' => 'employees', 'label' => 'Employees'],
-                            ['id' => 'payslip', 'label' => 'Payslip'],
-                            ['id' => 'set-salary', 'label' => 'Set Salary'],
-                            ['id' => 'payroll', 'label' => 'Payroll'],
-                            ['id' => 'attendance', 'label' => 'Attendance'],
-                            ['id' => 'shifts', 'label' => 'Shifts'],
-                            ['id' => 'attendances', 'label' => 'Attendances'],
+                            ['id' => 'employees', 'label' => __('front.docs.menu_employees')],
+                            ['id' => 'payslip', 'label' => __('front.docs.menu_payslip')],
+                            ['id' => 'set-salary', 'label' => __('front.docs.menu_set_salary')],
+                            ['id' => 'payroll', 'label' => __('front.docs.menu_payroll')],
+                            ['id' => 'attendance', 'label' => __('front.docs.menu_attendance')],
+                            ['id' => 'shifts', 'label' => __('front.docs.menu_shifts')],
+                            ['id' => 'attendances', 'label' => __('front.docs.menu_attendances')],
                             [
                                 'id' => 'leave-management',
-                                'label' => 'Leave Management',
+                                'label' => __('front.docs.menu_leave_management'),
                                 'nested' => [
-                                    ['id' => 'leave-types', 'label' => 'Leave Types'],
-                                    ['id' => 'leave-applications', 'label' => 'Leave Applications'],
-                                    ['id' => 'leave-balance', 'label' => 'Leave Balance'],
-                                    ['id' => 'holidays', 'label' => 'Holidays'],
+                                    ['id' => 'leave-types', 'label' => __('front.docs.menu_leave_types')],
+                                    ['id' => 'leave-applications', 'label' => __('front.docs.menu_leave_applications')],
+                                    ['id' => 'leave-balance', 'label' => __('front.docs.menu_leave_balance')],
+                                    ['id' => 'holidays', 'label' => __('front.docs.menu_holidays')],
                                 ]
                             ],
-                            ['id' => 'awards', 'label' => 'Awards'],
-                            ['id' => 'promotions', 'label' => 'Promotions'],
-                            ['id' => 'resignations', 'label' => 'Resignations'],
-                            ['id' => 'terminations', 'label' => 'Terminations'],
-                            ['id' => 'warnings', 'label' => 'Warnings'],
-                            ['id' => 'complaints', 'label' => 'Complaints'],
-                            ['id' => 'hrm-transfers', 'label' => 'Transfers'],
-                            ['id' => 'documents', 'label' => 'Documents'],
-                            ['id' => 'acknowledgments', 'label' => 'Acknowledgments'],
-                            ['id' => 'announcements', 'label' => 'Announcements'],
-                            ['id' => 'events', 'label' => 'Events'],
-                            ['id' => 'hrm-system-setup', 'label' => 'System Setup'],
+                            ['id' => 'awards', 'label' => __('front.docs.menu_awards')],
+                            ['id' => 'promotions', 'label' => __('front.docs.menu_promotions')],
+                            ['id' => 'resignations', 'label' => __('front.docs.menu_resignations')],
+                            ['id' => 'terminations', 'label' => __('front.docs.menu_terminations')],
+                            ['id' => 'warnings', 'label' => __('front.docs.menu_warnings')],
+                            ['id' => 'complaints', 'label' => __('front.docs.menu_complaints')],
+                            ['id' => 'hrm-transfers', 'label' => __('front.docs.menu_hrm_transfers')],
+                            ['id' => 'documents', 'label' => __('front.docs.menu_documents')],
+                            ['id' => 'acknowledgments', 'label' => __('front.docs.menu_acknowledgments')],
+                            ['id' => 'announcements', 'label' => __('front.docs.menu_announcements')],
+                            ['id' => 'events', 'label' => __('front.docs.menu_events')],
+                            ['id' => 'hrm-system-setup', 'label' => __('front.docs.menu_system_setup')],
                         ]
                     ],
                     [
                         'id' => 'pos',
                         'icon' => 'point_of_sale',
-                        'label' => 'POS',
+                        'label' => __('front.docs.menu_pos'),
                         'children' => [
-                            ['id' => 'add-pos', 'label' => 'Add POS'],
-                            ['id' => 'pos-orders', 'label' => 'POS Orders'],
-                            ['id' => 'print-barcode', 'label' => 'Print Barcode'],
-                            ['id' => 'pos-reports', 'label' => 'Reports'],
+                            ['id' => 'add-pos', 'label' => __('front.docs.menu_add_pos')],
+                            ['id' => 'pos-orders', 'label' => __('front.docs.menu_pos_orders')],
+                            ['id' => 'print-barcode', 'label' => __('front.docs.menu_print_barcode')],
+                            ['id' => 'pos-reports', 'label' => __('front.docs.menu_reports')],
                         ]
                     ],
                     [
                         'id' => 'crm',
                         'icon' => 'favorite',
-                        'label' => 'CRM',
+                        'label' => __('front.docs.menu_crm'),
                         'children' => [
-                            ['id' => 'leads', 'label' => 'Leads'],
-                            ['id' => 'deals', 'label' => 'Deals'],
-                            ['id' => 'crm-system-setup', 'label' => 'System Setup'],
+                            ['id' => 'leads', 'label' => __('front.docs.menu_leads')],
+                            ['id' => 'deals', 'label' => __('front.docs.menu_deals')],
+                            ['id' => 'crm-system-setup', 'label' => __('front.docs.menu_system_setup')],
                             [
                                 'id' => 'crm-reports',
-                                'label' => 'Reports',
+                                'label' => __('front.docs.menu_crm_reports'),
                                 'nested' => [
-                                    ['id' => 'lead-reports', 'label' => 'Lead Reports'],
-                                    ['id' => 'deal-reports', 'label' => 'Deal Reports'],
+                                    ['id' => 'lead-reports', 'label' => __('front.docs.menu_lead_reports')],
+                                    ['id' => 'deal-reports', 'label' => __('front.docs.menu_deal_reports')],
                                 ]
                             ],
                         ]
@@ -183,35 +183,35 @@
                     [
                         'id' => 'media-library',
                         'icon' => 'image',
-                        'label' => 'Media Library',
+                        'label' => __('front.docs.menu_media_library'),
                         'children' => []
                     ],
                     [
                         'id' => 'messenger',
                         'icon' => 'chat',
-                        'label' => 'Messenger',
+                        'label' => __('front.docs.menu_messenger'),
                         'children' => []
                     ],
                     [
                         'id' => 'helpdesk',
                         'icon' => 'help_center',
-                        'label' => 'Helpdesk',
+                        'label' => __('front.docs.menu_helpdesk'),
                         'children' => []
                     ],
                     [
                         'id' => 'plan',
                         'icon' => 'credit_card',
-                        'label' => 'Plan',
+                        'label' => __('front.docs.menu_plan'),
                         'children' => [
-                            ['id' => 'setup-subscription-plan', 'label' => 'Setup Subscription Plan'],
-                            ['id' => 'bank-transfer-requests', 'label' => 'Bank Transfer Requests'],
-                            ['id' => 'orders', 'label' => 'Orders'],
+                            ['id' => 'setup-subscription-plan', 'label' => __('front.docs.menu_subscription_plan')],
+                            ['id' => 'bank-transfer-requests', 'label' => __('front.docs.menu_bank_transfer_requests')],
+                            ['id' => 'orders', 'label' => __('front.docs.menu_orders')],
                         ]
                     ],
                     [
                         'id' => 'settings',
                         'icon' => 'settings',
-                        'label' => 'Settings',
+                        'label' => __('front.docs.menu_settings'),
                         'children' => []
                     ],
                 ];
@@ -276,7 +276,7 @@
 
             {{-- Mobile sidebar toggle --}}
             <button class="mb-6 flex items-center gap-2 rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-600 lg:hidden" id="mobile-sidebar-toggle" onclick="document.getElementById('mobile-sidebar-drawer').classList.toggle('hidden')">
-                <span class="material-symbols-outlined text-lg">menu</span> Browse Modules
+                <span class="material-symbols-outlined text-lg">menu</span> @lang('front.docs.browse_modules')
             </button>
 
             {{-- Mobile drawer --}}
@@ -284,7 +284,7 @@
                 <div class="absolute inset-0 bg-black/20 backdrop-blur-sm" onclick="document.getElementById('mobile-sidebar-drawer').classList.add('hidden')"></div>
                 <div class="absolute left-0 top-0 h-full w-72 bg-white shadow-xl p-6 overflow-y-auto sidebar-scroll">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-sm font-bold text-gray-900">Modules</h3>
+                        <h3 class="text-sm font-bold text-gray-900">@lang('front.docs.modules_heading')</h3>
                         <button onclick="document.getElementById('mobile-sidebar-drawer').classList.add('hidden')" class="text-gray-400 hover:text-gray-600">
                             <span class="material-symbols-outlined">close</span>
                         </button>
@@ -327,11 +327,11 @@
             {{-- Header --}}
             <div class="mb-16">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand/20 bg-brand/5 text-brand text-[10px] font-bold tracking-widest uppercase mb-6">
-                    <span class="material-symbols-outlined text-sm">menu_book</span> 16 MODULES
+                    <span class="material-symbols-outlined text-sm">menu_book</span> @lang('front.docs.badge')
                 </div>
-                <h1 class="text-4xl md:text-5xl font-extralight tracking-tight text-gray-900 mb-4">Documentation</h1>
+                <h1 class="text-4xl md:text-5xl font-extralight tracking-tight text-gray-900 mb-4">@lang('front.docs.title')</h1>
                 <p class="max-w-2xl text-lg font-light leading-relaxed text-gray-500">
-                    Everything you need to know about every Bojeri module — from setup to daily use. Click any module below or browse the sidebar.
+                    @lang('front.docs.subtitle')
                 </p>
             </div>
 
@@ -344,210 +344,210 @@
                 [
                     'id' => 'dashboard',
                     'icon' => 'dashboard',
-                    'title' => 'Dashboard',
-                    'tagline' => 'Your business at a glance — real-time data, role-specific views.',
-                    'description' => 'The Dashboard gives every team member a personalized command center. Five dedicated dashboards — Account, Project, HRM, POS, and CRM — surface the metrics that matter most to each role. Finance sees revenue and expenses; HR sees attendance and leave requests; Sales sees pipeline and deal values.',
+                    'title' => __('front.docs.mod_dashboard_title'),
+                    'tagline' => __('front.docs.mod_dashboard_tagline'),
+                    'description' => __('front.docs.mod_dashboard_desc'),
                     'features' => [
-                        ['icon' => 'monitoring', 'title' => 'Account Dashboard', 'desc' => 'Revenue, expenses, invoices, and financial KPIs at a glance.'],
-                        ['icon' => 'assignment', 'title' => 'Project Dashboard', 'desc' => 'Active projects, task progress, milestones, and deadlines.'],
-                        ['icon' => 'badge', 'title' => 'HRM Dashboard', 'desc' => 'Attendance, leave stats, payroll summaries, and team status.'],
-                        ['icon' => 'point_of_sale', 'title' => 'POS Dashboard', 'desc' => 'Daily sales, top products, and POS transaction analytics.'],
-                        ['icon' => 'favorite', 'title' => 'CRM Dashboard', 'desc' => 'Lead pipeline, deal values, conversion rates, and source tracking.'],
+                        ['icon' => 'monitoring', 'title' => __('front.docs.mod_dashboard_feat1_title'), 'desc' => __('front.docs.mod_dashboard_feat1_desc')],
+                        ['icon' => 'assignment', 'title' => __('front.docs.mod_dashboard_feat2_title'), 'desc' => __('front.docs.mod_dashboard_feat2_desc')],
+                        ['icon' => 'badge', 'title' => __('front.docs.mod_dashboard_feat3_title'), 'desc' => __('front.docs.mod_dashboard_feat3_desc')],
+                        ['icon' => 'point_of_sale', 'title' => __('front.docs.mod_dashboard_feat4_title'), 'desc' => __('front.docs.mod_dashboard_feat4_desc')],
+                        ['icon' => 'favorite', 'title' => __('front.docs.mod_dashboard_feat5_title'), 'desc' => __('front.docs.mod_dashboard_feat5_desc')],
                     ]
                 ],
                 [
                     'id' => 'user-management',
                     'icon' => 'group',
-                    'title' => 'User Management',
-                    'tagline' => 'The right people, the right access — every time.',
-                    'description' => 'Create team members with defined roles and granular permissions. Start by setting up Roles — each role gets a custom name and a precise set of permissions chosen from your active modules. Then create Users and assign them a role. Every user action is gated by Spatie permission checks.',
+                    'title' => __('front.docs.mod_usermgmt_title'),
+                    'tagline' => __('front.docs.mod_usermgmt_tagline'),
+                    'description' => __('front.docs.mod_usermgmt_desc'),
                     'features' => [
-                        ['icon' => 'shield_person', 'title' => 'Role Builder', 'desc' => 'Create unlimited custom roles with per-permission control from every module.'],
-                        ['icon' => 'person_add', 'title' => 'User Creation', 'desc' => 'Add users with name, email, phone, password, and role in one form.'],
-                        ['icon' => 'history', 'title' => 'Login History', 'desc' => 'View every login with IP, browser, timestamp, and role filters.'],
-                        ['icon' => 'switch_account', 'title' => 'Impersonation', 'desc' => 'Log in as any user to troubleshoot issues — without their password.'],
+                        ['icon' => 'shield_person', 'title' => __('front.docs.mod_usermgmt_feat1_title'), 'desc' => __('front.docs.mod_usermgmt_feat1_desc')],
+                        ['icon' => 'person_add', 'title' => __('front.docs.mod_usermgmt_feat2_title'), 'desc' => __('front.docs.mod_usermgmt_feat2_desc')],
+                        ['icon' => 'history', 'title' => __('front.docs.mod_usermgmt_feat3_title'), 'desc' => __('front.docs.mod_usermgmt_feat3_desc')],
+                        ['icon' => 'switch_account', 'title' => __('front.docs.mod_usermgmt_feat4_title'), 'desc' => __('front.docs.mod_usermgmt_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'proposal',
                     'icon' => 'description',
-                    'title' => 'Proposals',
-                    'tagline' => 'Turn quotes into commitments — then into invoices — in clicks, not days.',
-                    'description' => 'Create proposals by selecting a customer, choosing products from your warehouse inventory, and adding line items with quantities, prices, discounts, and taxes. Track proposals through Draft → Sent → Accepted → Rejected. Convert accepted proposals directly into Sales Invoices with a single click.',
+                    'title' => __('front.docs.mod_proposal_title'),
+                    'tagline' => __('front.docs.mod_proposal_tagline'),
+                    'description' => __('front.docs.mod_proposal_desc'),
                     'features' => [
-                        ['icon' => 'calculate', 'title' => 'Auto-Calculate Totals', 'desc' => 'Per-line discounts, multi-rate taxes, and running subtotals computed instantly.'],
-                        ['icon' => 'swap_horiz', 'title' => 'One-Click Conversion', 'desc' => 'Convert accepted proposals directly into Sales Invoices with all data preserved.'],
-                        ['icon' => 'warehouse', 'title' => 'Warehouse Integration', 'desc' => 'Pull products with live stock quantities so you never quote items you can\'t deliver.'],
-                        ['icon' => 'print', 'title' => 'Print View', 'desc' => 'Clean, professional print layout for client-ready proposals.'],
+                        ['icon' => 'calculate', 'title' => __('front.docs.mod_proposal_feat1_title'), 'desc' => __('front.docs.mod_proposal_feat1_desc')],
+                        ['icon' => 'swap_horiz', 'title' => __('front.docs.mod_proposal_feat2_title'), 'desc' => __('front.docs.mod_proposal_feat2_desc')],
+                        ['icon' => 'warehouse', 'title' => __('front.docs.mod_proposal_feat3_title'), 'desc' => __('front.docs.mod_proposal_feat3_desc')],
+                        ['icon' => 'print', 'title' => __('front.docs.mod_proposal_feat4_title'), 'desc' => __('front.docs.mod_proposal_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'sales-invoice',
                     'icon' => 'receipt',
-                    'title' => 'Sales Invoice',
-                    'tagline' => 'From draft to paid — track every dollar with precision.',
-                    'description' => 'Create Sales Invoices with multi-line items, per-item discounts, and multiple tax rates. Invoices follow a Draft → Posted lifecycle with edit protection on posted invoices. Track balance amounts and manage Sales Invoice Returns with their own approval workflow.',
+                    'title' => __('front.docs.mod_salesinvoice_title'),
+                    'tagline' => __('front.docs.mod_salesinvoice_tagline'),
+                    'description' => __('front.docs.mod_salesinvoice_desc'),
                     'features' => [
-                        ['icon' => 'receipt_long', 'title' => 'Invoice Builder', 'desc' => 'Multi-line invoices with products, quantities, prices, taxes, and discounts.'],
-                        ['icon' => 'lock', 'title' => 'Data Integrity', 'desc' => 'Posted invoices are locked — no accidental edits to financial records.'],
-                        ['icon' => 'undo', 'title' => 'Sales Returns', 'desc' => 'Linked returns with item-level detail and Draft → Approved → Completed flow.'],
-                        ['icon' => 'account_balance_wallet', 'title' => 'Balance Tracking', 'desc' => 'Total vs. balance fields show outstanding payments instantly.'],
+                        ['icon' => 'receipt_long', 'title' => __('front.docs.mod_salesinvoice_feat1_title'), 'desc' => __('front.docs.mod_salesinvoice_feat1_desc')],
+                        ['icon' => 'lock', 'title' => __('front.docs.mod_salesinvoice_feat2_title'), 'desc' => __('front.docs.mod_salesinvoice_feat2_desc')],
+                        ['icon' => 'undo', 'title' => __('front.docs.mod_salesinvoice_feat3_title'), 'desc' => __('front.docs.mod_salesinvoice_feat3_desc')],
+                        ['icon' => 'account_balance_wallet', 'title' => __('front.docs.mod_salesinvoice_feat4_title'), 'desc' => __('front.docs.mod_salesinvoice_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'purchase',
                     'icon' => 'shopping_cart',
-                    'title' => 'Purchase',
-                    'tagline' => 'Control what comes in — every vendor, every warehouse, every return.',
-                    'description' => 'Cover the full procurement cycle: Purchase Invoices with multi-line items and Draft → Posted lifecycle, Purchase Returns with auto debit notes, Warehouse management with named locations, and inter-warehouse Stock Transfers with approval workflows.',
+                    'title' => __('front.docs.mod_purchase_title'),
+                    'tagline' => __('front.docs.mod_purchase_tagline'),
+                    'description' => __('front.docs.mod_purchase_desc'),
                     'features' => [
-                        ['icon' => 'receipt', 'title' => 'Purchase Invoices', 'desc' => 'Record vendor purchases with multi-line items, taxes, and discounts.'],
-                        ['icon' => 'assignment_return', 'title' => 'Purchase Returns', 'desc' => 'Linked returns with per-item quantities, reasons, and auto debit notes.'],
-                        ['icon' => 'warehouse', 'title' => 'Warehouses', 'desc' => 'Named storage locations with address, phone, and active/inactive status.'],
-                        ['icon' => 'local_shipping', 'title' => 'Stock Transfers', 'desc' => 'Move stock between warehouses with approval workflows and quantity tracking.'],
+                        ['icon' => 'receipt', 'title' => __('front.docs.mod_purchase_feat1_title'), 'desc' => __('front.docs.mod_purchase_feat1_desc')],
+                        ['icon' => 'assignment_return', 'title' => __('front.docs.mod_purchase_feat2_title'), 'desc' => __('front.docs.mod_purchase_feat2_desc')],
+                        ['icon' => 'warehouse', 'title' => __('front.docs.mod_purchase_feat3_title'), 'desc' => __('front.docs.mod_purchase_feat3_desc')],
+                        ['icon' => 'local_shipping', 'title' => __('front.docs.mod_purchase_feat4_title'), 'desc' => __('front.docs.mod_purchase_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'product-service',
                     'icon' => 'inventory_2',
-                    'title' => 'Products & Services',
-                    'tagline' => 'Your complete catalog — organized, priced, and ready to sell.',
-                    'description' => 'The foundation that powers your invoices, proposals, POS transactions, and purchase orders. Create items with SKU, dual pricing (sale & purchase), categories, tax rates, measurement units, and per-warehouse stock tracking.',
+                    'title' => __('front.docs.mod_products_title'),
+                    'tagline' => __('front.docs.mod_products_tagline'),
+                    'description' => __('front.docs.mod_products_desc'),
                     'features' => [
-                        ['icon' => 'qr_code', 'title' => 'Item Profiles', 'desc' => 'Name, SKU, description, sale price, purchase price, unit, and product type.'],
-                        ['icon' => 'category', 'title' => 'Category Management', 'desc' => 'Organize items into categories for structured browsing and filtering.'],
-                        ['icon' => 'percent', 'title' => 'Tax Configuration', 'desc' => 'Create named taxes with rates that auto-apply to every transaction.'],
-                        ['icon' => 'straighten', 'title' => 'Unit Management', 'desc' => 'Define custom measurement units — pieces, kg, liters, hours.'],
+                        ['icon' => 'qr_code', 'title' => __('front.docs.mod_products_feat1_title'), 'desc' => __('front.docs.mod_products_feat1_desc')],
+                        ['icon' => 'category', 'title' => __('front.docs.mod_products_feat2_title'), 'desc' => __('front.docs.mod_products_feat2_desc')],
+                        ['icon' => 'percent', 'title' => __('front.docs.mod_products_feat3_title'), 'desc' => __('front.docs.mod_products_feat3_desc')],
+                        ['icon' => 'straighten', 'title' => __('front.docs.mod_products_feat4_title'), 'desc' => __('front.docs.mod_products_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'project',
                     'icon' => 'assignment',
-                    'title' => 'Projects',
-                    'tagline' => 'Plan, track, and deliver — every task, every milestone, every team member.',
-                    'description' => 'Full project lifecycle management with tasks, subtasks, milestones, Kanban boards, Calendar views, a dedicated Bug tracker, file uploads, activity logs, and cross-project Reports. Invite team members and clients for visibility.',
+                    'title' => __('front.docs.mod_project_title'),
+                    'tagline' => __('front.docs.mod_project_tagline'),
+                    'description' => __('front.docs.mod_project_desc'),
                     'features' => [
-                        ['icon' => 'view_kanban', 'title' => 'Kanban Board', 'desc' => 'Visual drag-and-drop task management with custom stage workflows.'],
-                        ['icon' => 'calendar_month', 'title' => 'Calendar View', 'desc' => 'Timeline-based task visualization for deadline tracking.'],
-                        ['icon' => 'bug_report', 'title' => 'Bug Tracker', 'desc' => 'Dedicated bug tracking with priorities, stages, and comment threads.'],
-                        ['icon' => 'content_copy', 'title' => 'Project Duplication', 'desc' => 'Clone project structure for recurring project types.'],
+                        ['icon' => 'view_kanban', 'title' => __('front.docs.mod_project_feat1_title'), 'desc' => __('front.docs.mod_project_feat1_desc')],
+                        ['icon' => 'calendar_month', 'title' => __('front.docs.mod_project_feat2_title'), 'desc' => __('front.docs.mod_project_feat2_desc')],
+                        ['icon' => 'bug_report', 'title' => __('front.docs.mod_project_feat3_title'), 'desc' => __('front.docs.mod_project_feat3_desc')],
+                        ['icon' => 'content_copy', 'title' => __('front.docs.mod_project_feat4_title'), 'desc' => __('front.docs.mod_project_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'accounting',
                     'icon' => 'account_balance',
-                    'title' => 'Accounting',
-                    'tagline' => 'Your books, balanced — customers, vendors, banking, and reports in one place.',
-                    'description' => 'Full double-entry bookkeeping directly in your ERP. Chart of Accounts, Revenue & Expense tracking, Customer & Vendor Payments, Banking (accounts, transactions, transfers), Credit & Debit Notes, and Financial Reports — all connected to your invoicing and purchasing modules.',
+                    'title' => __('front.docs.mod_accounting_title'),
+                    'tagline' => __('front.docs.mod_accounting_tagline'),
+                    'description' => __('front.docs.mod_accounting_desc'),
                     'features' => [
-                        ['icon' => 'account_tree', 'title' => 'Chart of Accounts', 'desc' => 'Full double-entry structure with Assets, Liabilities, Equity, Revenue, Expenses.'],
-                        ['icon' => 'savings', 'title' => 'Banking', 'desc' => 'Multiple bank accounts, transaction recording, and inter-account transfers.'],
-                        ['icon' => 'payments', 'title' => 'Payments', 'desc' => 'Customer and vendor payments tracked against outstanding invoices.'],
-                        ['icon' => 'equalizer', 'title' => 'Financial Reports', 'desc' => 'Profit & loss, balance sheets, and transaction summaries in one click.'],
+                        ['icon' => 'account_tree', 'title' => __('front.docs.mod_accounting_feat1_title'), 'desc' => __('front.docs.mod_accounting_feat1_desc')],
+                        ['icon' => 'savings', 'title' => __('front.docs.mod_accounting_feat2_title'), 'desc' => __('front.docs.mod_accounting_feat2_desc')],
+                        ['icon' => 'payments', 'title' => __('front.docs.mod_accounting_feat3_title'), 'desc' => __('front.docs.mod_accounting_feat3_desc')],
+                        ['icon' => 'equalizer', 'title' => __('front.docs.mod_accounting_feat4_title'), 'desc' => __('front.docs.mod_accounting_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'hrm',
                     'icon' => 'badge',
-                    'title' => 'HRM',
-                    'tagline' => 'Your team, managed — attendance, payroll, leave, and lifecycle.',
-                    'description' => 'Complete human resource management: Employees, Shifts, Clock in/out with IP restriction, automatic overtime calculations, Leave Management (types, applications, balance, holidays), Payroll & Payslips, Awards, Promotions, Resignations, Terminations, Warnings, Complaints, Documents, Announcements, and Events.',
+                    'title' => __('front.docs.mod_hrm_title'),
+                    'tagline' => __('front.docs.mod_hrm_tagline'),
+                    'description' => __('front.docs.mod_hrm_desc'),
                     'features' => [
-                        ['icon' => 'schedule', 'title' => 'Attendance & Shifts', 'desc' => 'Clock in/out with IP restriction, shift-aware tracking, and overtime calculations.'],
-                        ['icon' => 'payments', 'title' => 'Payroll & Payslips', 'desc' => 'Generate payroll from attendance data with automated allowance and deduction calculations.'],
-                        ['icon' => 'event_busy', 'title' => 'Leave Management', 'desc' => 'Leave types, applications, balance tracking, and holiday calendars.'],
-                        ['icon' => 'military_tech', 'title' => 'Employee Lifecycle', 'desc' => 'Awards, promotions, resignations, terminations, transfers, and complaints.'],
+                        ['icon' => 'schedule', 'title' => __('front.docs.mod_hrm_feat1_title'), 'desc' => __('front.docs.mod_hrm_feat1_desc')],
+                        ['icon' => 'payments', 'title' => __('front.docs.mod_hrm_feat2_title'), 'desc' => __('front.docs.mod_hrm_feat2_desc')],
+                        ['icon' => 'event_busy', 'title' => __('front.docs.mod_hrm_feat3_title'), 'desc' => __('front.docs.mod_hrm_feat3_desc')],
+                        ['icon' => 'military_tech', 'title' => __('front.docs.mod_hrm_feat4_title'), 'desc' => __('front.docs.mod_hrm_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'pos',
                     'icon' => 'point_of_sale',
-                    'title' => 'POS',
-                    'tagline' => 'Sell in person, sync to your books — every transaction, every barcode.',
-                    'description' => 'Browser-based point-of-sale terminal. Search or scan products, process sales with auto-calculated taxes, generate POS Orders with complete records, print barcodes for physical inventory, and view sales analytics — all connected to your product catalog and warehouse stock.',
+                    'title' => __('front.docs.mod_pos_title'),
+                    'tagline' => __('front.docs.mod_pos_tagline'),
+                    'description' => __('front.docs.mod_pos_desc'),
                     'features' => [
-                        ['icon' => 'devices', 'title' => 'Browser-Based Terminal', 'desc' => 'Sell from any browser — no special hardware required.'],
-                        ['icon' => 'barcode', 'title' => 'Barcode Printing', 'desc' => 'Generate and print barcodes for physical inventory.'],
-                        ['icon' => 'sync', 'title' => 'Inventory Sync', 'desc' => 'Every sale updates warehouse stock levels in real time.'],
-                        ['icon' => 'analytics', 'title' => 'Sales Reports', 'desc' => 'Daily, weekly, and monthly sales analytics and breakdowns.'],
+                        ['icon' => 'devices', 'title' => __('front.docs.mod_pos_feat1_title'), 'desc' => __('front.docs.mod_pos_feat1_desc')],
+                        ['icon' => 'barcode', 'title' => __('front.docs.mod_pos_feat2_title'), 'desc' => __('front.docs.mod_pos_feat2_desc')],
+                        ['icon' => 'sync', 'title' => __('front.docs.mod_pos_feat3_title'), 'desc' => __('front.docs.mod_pos_feat3_desc')],
+                        ['icon' => 'analytics', 'title' => __('front.docs.mod_pos_feat4_title'), 'desc' => __('front.docs.mod_pos_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'crm',
                     'icon' => 'favorite',
-                    'title' => 'CRM',
-                    'tagline' => 'Every lead tracked, every deal closed — your sales pipeline, connected.',
-                    'description' => 'Lead and deal management with custom pipeline stages, multi-user assignments, source tracking, and conversion analytics. Leads convert to deals with full history preservation. CRM data feeds directly into invoicing and reporting.',
+                    'title' => __('front.docs.mod_crm_title'),
+                    'tagline' => __('front.docs.mod_crm_tagline'),
+                    'description' => __('front.docs.mod_crm_desc'),
                     'features' => [
-                        ['icon' => 'person_pin', 'title' => 'Lead Management', 'desc' => 'Track leads with source, stage, value, and multi-member assignments.'],
-                        ['icon' => 'handshake', 'title' => 'Deal Pipeline', 'desc' => 'Custom stages, close dates, values, and progress tracking per deal.'],
-                        ['icon' => 'conversion_path', 'title' => 'Lead-to-Deal Conversion', 'desc' => 'Convert qualified leads into deals with full history preservation.'],
-                        ['icon' => 'bar_chart', 'title' => 'CRM Reports', 'desc' => 'Lead and deal reports with conversion rates and pipeline analytics.'],
+                        ['icon' => 'person_pin', 'title' => __('front.docs.mod_crm_feat1_title'), 'desc' => __('front.docs.mod_crm_feat1_desc')],
+                        ['icon' => 'handshake', 'title' => __('front.docs.mod_crm_feat2_title'), 'desc' => __('front.docs.mod_crm_feat2_desc')],
+                        ['icon' => 'conversion_path', 'title' => __('front.docs.mod_crm_feat3_title'), 'desc' => __('front.docs.mod_crm_feat3_desc')],
+                        ['icon' => 'bar_chart', 'title' => __('front.docs.mod_crm_feat4_title'), 'desc' => __('front.docs.mod_crm_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'media-library',
                     'icon' => 'image',
-                    'title' => 'Media Library',
-                    'tagline' => 'Every file, organized and accessible — your team\'s shared workspace for media.',
-                    'description' => 'Centralized file management with batch uploads, directory organization, and granular access controls. Supports local, AWS S3, and Wasabi storage backends. Powered by Spatie MediaLibrary for enterprise-grade file handling.',
+                    'title' => __('front.docs.mod_media_title'),
+                    'tagline' => __('front.docs.mod_media_tagline'),
+                    'description' => __('front.docs.mod_media_desc'),
                     'features' => [
-                        ['icon' => 'upload_file', 'title' => 'Batch Upload', 'desc' => 'Upload multiple files at once with drag-and-drop support.'],
-                        ['icon' => 'folder', 'title' => 'Directory Management', 'desc' => 'Create, rename, and nest directories for organized file storage.'],
-                        ['icon' => 'cloud', 'title' => 'Multiple Backends', 'desc' => 'Store files on local disk, AWS S3, or Wasabi cloud storage.'],
-                        ['icon' => 'lock', 'title' => 'Access Controls', 'desc' => 'Own vs. all media permissions with separate download controls.'],
+                        ['icon' => 'upload_file', 'title' => __('front.docs.mod_media_feat1_title'), 'desc' => __('front.docs.mod_media_feat1_desc')],
+                        ['icon' => 'folder', 'title' => __('front.docs.mod_media_feat2_title'), 'desc' => __('front.docs.mod_media_feat2_desc')],
+                        ['icon' => 'cloud', 'title' => __('front.docs.mod_media_feat3_title'), 'desc' => __('front.docs.mod_media_feat3_desc')],
+                        ['icon' => 'lock', 'title' => __('front.docs.mod_media_feat4_title'), 'desc' => __('front.docs.mod_media_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'messenger',
                     'icon' => 'chat',
-                    'title' => 'Messenger',
-                    'tagline' => 'Instant team communication — right inside your workspace.',
-                    'description' => 'Real-time messaging powered by Pusher. Send text and files, see read receipts, edit or delete messages, favorite contacts, and pin conversations. Online presence indicators show who\'s active right now.',
+                    'title' => __('front.docs.mod_messenger_title'),
+                    'tagline' => __('front.docs.mod_messenger_tagline'),
+                    'description' => __('front.docs.mod_messenger_desc'),
                     'features' => [
-                        ['icon' => 'bolt', 'title' => 'Real-Time Delivery', 'desc' => 'Instant message delivery via Pusher WebSockets — no page refreshes.'],
-                        ['icon' => 'attach_file', 'title' => 'File Sharing', 'desc' => 'Send documents, images, and files within conversations.'],
-                        ['icon' => 'visibility', 'title' => 'Read Receipts', 'desc' => 'Seen/unseen indicators on every message.'],
-                        ['icon' => 'circle', 'title' => 'Online Presence', 'desc' => 'Live indicators showing who\'s online right now.'],
+                        ['icon' => 'bolt', 'title' => __('front.docs.mod_messenger_feat1_title'), 'desc' => __('front.docs.mod_messenger_feat1_desc')],
+                        ['icon' => 'attach_file', 'title' => __('front.docs.mod_messenger_feat2_title'), 'desc' => __('front.docs.mod_messenger_feat2_desc')],
+                        ['icon' => 'visibility', 'title' => __('front.docs.mod_messenger_feat3_title'), 'desc' => __('front.docs.mod_messenger_feat3_desc')],
+                        ['icon' => 'circle', 'title' => __('front.docs.mod_messenger_feat4_title'), 'desc' => __('front.docs.mod_messenger_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'helpdesk',
                     'icon' => 'help_center',
-                    'title' => 'Helpdesk',
-                    'tagline' => 'Every request tracked, every issue resolved — support that never drops the ball.',
-                    'description' => 'Complete ticketing system with priorities, color-coded categories, threaded replies with file attachments, internal notes, and resolution time tracking. Tickets follow Open → In Progress → Resolved → Closed lifecycle.',
+                    'title' => __('front.docs.mod_helpdesk_title'),
+                    'tagline' => __('front.docs.mod_helpdesk_tagline'),
+                    'description' => __('front.docs.mod_helpdesk_desc'),
                     'features' => [
-                        ['icon' => 'confirmation_number', 'title' => 'Ticket System', 'desc' => 'Create tickets with title, description, priority, and category.'],
-                        ['icon' => 'forum', 'title' => 'Threaded Replies', 'desc' => 'Text responses and file attachments directly on each ticket.'],
-                        ['icon' => 'visibility_off', 'title' => 'Internal Notes', 'desc' => 'Private replies visible only to support staff — not the requester.'],
-                        ['icon' => 'timer', 'title' => 'SLA Tracking', 'desc' => 'Automatic resolution timestamps for measuring response times.'],
+                        ['icon' => 'confirmation_number', 'title' => __('front.docs.mod_helpdesk_feat1_title'), 'desc' => __('front.docs.mod_helpdesk_feat1_desc')],
+                        ['icon' => 'forum', 'title' => __('front.docs.mod_helpdesk_feat2_title'), 'desc' => __('front.docs.mod_helpdesk_feat2_desc')],
+                        ['icon' => 'visibility_off', 'title' => __('front.docs.mod_helpdesk_feat3_title'), 'desc' => __('front.docs.mod_helpdesk_feat3_desc')],
+                        ['icon' => 'timer', 'title' => __('front.docs.mod_helpdesk_feat4_title'), 'desc' => __('front.docs.mod_helpdesk_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'plan',
                     'icon' => 'credit_card',
-                    'title' => 'Subscriptions',
-                    'tagline' => 'Flexible plans, transparent billing — grow your platform with confidence.',
-                    'description' => 'Create subscription plans with monthly/annual pricing, user limits, storage quotas, and selectable feature modules. Accept payments via Stripe, PayPal, or Bank Transfer. Apply coupon codes with percentage or fixed discounts, usage limits, and expiry dates.',
+                    'title' => __('front.docs.mod_subscriptions_title'),
+                    'tagline' => __('front.docs.mod_subscriptions_tagline'),
+                    'description' => __('front.docs.mod_subscriptions_desc'),
                     'features' => [
-                        ['icon' => 'tune', 'title' => 'Plan Builder', 'desc' => 'Create plans with pricing, user limits, storage quotas, and module access.'],
-                        ['icon' => 'payment', 'title' => 'Payment Gateways', 'desc' => 'Accept payments via Stripe, PayPal, or bank transfer with approval workflow.'],
-                        ['icon' => 'local_offer', 'title' => 'Coupon System', 'desc' => 'Discount codes with type, limits, thresholds, and expiry dates.'],
-                        ['icon' => 'rocket_launch', 'title' => 'Free Trials', 'desc' => 'Let prospects explore the platform before committing.'],
+                        ['icon' => 'tune', 'title' => __('front.docs.mod_subscriptions_feat1_title'), 'desc' => __('front.docs.mod_subscriptions_feat1_desc')],
+                        ['icon' => 'payment', 'title' => __('front.docs.mod_subscriptions_feat2_title'), 'desc' => __('front.docs.mod_subscriptions_feat2_desc')],
+                        ['icon' => 'local_offer', 'title' => __('front.docs.mod_subscriptions_feat3_title'), 'desc' => __('front.docs.mod_subscriptions_feat3_desc')],
+                        ['icon' => 'rocket_launch', 'title' => __('front.docs.mod_subscriptions_feat4_title'), 'desc' => __('front.docs.mod_subscriptions_feat4_desc')],
                     ]
                 ],
                 [
                     'id' => 'settings',
                     'icon' => 'settings',
-                    'title' => 'Settings',
-                    'tagline' => 'Configure everything — your brand, your email, your storage, your way.',
-                    'description' => 'Your platform\'s control center. Brand settings, currency configuration, SMTP email, cloud storage backends, cookie consent, Pusher config, email templates, notification templates, multi-language management with per-package translations, and SEO settings.',
+                    'title' => __('front.docs.mod_settings_title'),
+                    'tagline' => __('front.docs.mod_settings_tagline'),
+                    'description' => __('front.docs.mod_settings_desc'),
                     'features' => [
-                        ['icon' => 'palette', 'title' => 'Brand & Theme', 'desc' => 'Company name, logo, favicon, theme mode, and color scheme.'],
-                        ['icon' => 'email', 'title' => 'Email Configuration', 'desc' => 'SMTP settings with provider selection and live test email.'],
-                        ['icon' => 'translate', 'title' => 'Language Management', 'desc' => 'Create languages, edit translations, and manage per-package strings.'],
-                        ['icon' => 'travel_explore', 'title' => 'SEO Settings', 'desc' => 'Meta tags and SEO configuration for all public-facing pages.'],
+                        ['icon' => 'palette', 'title' => __('front.docs.mod_settings_feat1_title'), 'desc' => __('front.docs.mod_settings_feat1_desc')],
+                        ['icon' => 'email', 'title' => __('front.docs.mod_settings_feat2_title'), 'desc' => __('front.docs.mod_settings_feat2_desc')],
+                        ['icon' => 'translate', 'title' => __('front.docs.mod_settings_feat3_title'), 'desc' => __('front.docs.mod_settings_feat3_desc')],
+                        ['icon' => 'travel_explore', 'title' => __('front.docs.mod_settings_feat4_title'), 'desc' => __('front.docs.mod_settings_feat4_desc')],
                     ]
                 ],
             ];
@@ -564,7 +564,7 @@
                         <div>
                             <div class="flex items-center gap-3">
                                 <h2 class="text-2xl md:text-3xl font-light text-gray-900">{{ $mod['title'] }}</h2>
-                                <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-gray-100 text-gray-400">Module {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                                <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-gray-100 text-gray-400">@lang('front.docs.module_label_prefix') {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
                             </div>
                             <p class="text-brand text-sm font-medium mt-1">{{ $mod['tagline'] }}</p>
                         </div>
@@ -598,9 +598,9 @@
             {{-- Bottom CTA --}}
             <div class="mt-24 rounded-2xl bg-gradient-to-br from-brand to-emerald-600 p-10 md:p-14 text-center relative overflow-hidden">
                 <div class="absolute -right-12 -top-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
-                <h3 class="text-2xl md:text-3xl font-light text-white mb-3">Ready to explore?</h3>
-                <p class="text-emerald-100 font-light mb-6 max-w-md mx-auto">Start your free trial and get access to all 16 modules.</p>
-                <a href="/register" class="inline-block bg-white text-brand font-semibold px-8 py-3 rounded-full hover:shadow-xl transition-all text-sm">Start Free Trial</a>
+                <h3 class="text-2xl md:text-3xl font-light text-white mb-3">@lang('front.docs.ready_title')</h3>
+                <p class="text-emerald-100 font-light mb-6 max-w-md mx-auto">@lang('front.docs.ready_desc')</p>
+                <a href="/register" class="inline-block bg-white text-brand font-semibold px-8 py-3 rounded-full hover:shadow-xl transition-all text-sm">@lang('front.docs.ready_cta')</a>
             </div>
         </main>
 
@@ -608,7 +608,7 @@
         {{-- RIGHT SIDEBAR (table of contents) --}}
         {{-- ========================================= --}}
         <aside class="sticky top-16 hidden h-[calc(100vh-4rem)] w-48 shrink-0 py-10 pl-4 xl:block">
-            <p class="mb-4 text-[10px] font-bold uppercase tracking-widest text-gray-400">Modules</p>
+            <p class="mb-4 text-[10px] font-bold uppercase tracking-widest text-gray-400">@lang('front.docs.toc_label')</p>
             <nav class="sidebar-scroll h-[calc(100%-2rem)] overflow-y-auto flex flex-col gap-1 border-l border-gray-100" id="toc-nav">
                 @foreach($modules as $index => $mod)
                 <a class="toc-link relative -left-px block border-l border-transparent pl-3 text-[11px] text-gray-400 hover:border-brand hover:text-brand transition-all py-1" href="#{{ $mod['id'] }}">

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>@yield('title', 'Bojeri — All-in-One ERP Platform')</title>
-    <meta name="description" content="@yield('meta_description', 'Bojeri brings invoicing, accounting, HR, projects, CRM, and POS into one platform. Stop stitching tools together.')"/>
+    <title>@yield('title', __('front.meta.default_title'))</title>
+    <meta name="description" content="@yield('meta_description', __('front.meta.default_description'))"/>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon/favicon.ico') }}"/>
