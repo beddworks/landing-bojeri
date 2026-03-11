@@ -13,8 +13,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}"/>
     <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}"/>
 
-    <!-- Tailwind CSS v3 with plugins -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Vite: Tailwind CSS (npm) + app JS -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -23,24 +23,6 @@
 
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: '#12b780',
-                        'brand-dark': '#0e9968',
-                        'brand-light': '#e6f9f1',
-                        surface: '#f8fafb',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                },
-            },
-        }
-    </script>
 
     <style>
         body {
