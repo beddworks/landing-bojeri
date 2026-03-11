@@ -74,6 +74,68 @@
         </script>
     </section>
 
+    <section class="mb-10 md:mb-22 overflow-hidden" id="industries">
+        <div class="text-center mb-10 px-4">
+            <p class="text-xs uppercase tracking-widest text-brand font-semibold mb-2">Built for Every Sector</p>
+            <p class="text-gray-500 font-light max-w-xl mx-auto">One platform, every business type. Bojeri adapts to how your industry works.</p>
+        </div>
+
+        @php
+        $industries = [
+            ['icon' => 'storefront',        'name' => 'Retail & E-commerce',      'desc' => 'POS, inventory, invoicing'],
+            ['icon' => 'restaurant',         'name' => 'Food & Beverage',           'desc' => 'POS, purchase, stock sync'],
+            ['icon' => 'construction',       'name' => 'Construction',              'desc' => 'Projects, purchase, HRM'],
+            ['icon' => 'computer',           'name' => 'IT & Software',             'desc' => 'Projects, helpdesk, CRM'],
+            ['icon' => 'local_shipping',     'name' => 'Logistics & Distribution',  'desc' => 'Warehouses, transfers, accounting'],
+            ['icon' => 'groups',             'name' => 'HR & Staffing',             'desc' => 'Payroll, attendance, leave'],
+            ['icon' => 'design_services',    'name' => 'Agencies & Consulting',     'desc' => 'Proposals, CRM, projects'],
+            ['icon' => 'school',             'name' => 'Education',                 'desc' => 'HRM, accounting, events'],
+            ['icon' => 'apartment',          'name' => 'Real Estate',               'desc' => 'CRM, proposals, accounting'],
+            ['icon' => 'medical_services',   'name' => 'Healthcare',                'desc' => 'HRM, scheduling, billing'],
+            ['icon' => 'gavel',              'name' => 'Legal Firms',               'desc' => 'Projects, CRM, invoicing'],
+            ['icon' => 'hotel',              'name' => 'Hospitality',               'desc' => 'POS, HRM, accounting'],
+            ['icon' => 'inventory_2',        'name' => 'Wholesale & Trading',       'desc' => 'Purchase, sales, warehouse'],
+            ['icon' => 'volunteer_activism', 'name' => 'NGOs & Nonprofits',         'desc' => 'Accounting, HRM, projects'],
+            ['icon' => 'precision_manufacturing', 'name' => 'Manufacturing',        'desc' => 'Purchase, warehouse, payroll'],
+            ['icon' => 'account_balance',    'name' => 'Financial Services',        'desc' => 'Accounting, CRM, subscriptions'],
+        ];
+        @endphp
+
+        {{-- Track 1 (left → right) --}}
+        <div class="relative">
+            <div class="flex gap-4 industry-track-1 w-max">
+                @foreach(array_merge($industries, $industries) as $ind)
+                <div class="flex-shrink-0 flex items-center gap-3 px-5 py-4 rounded-2xl border border-gray-100 bg-white shadow-sm w-64">
+                    <div class="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-brand text-xl">{{ $ind['icon'] }}</span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 leading-tight">{{ $ind['name'] }}</p>
+                        <p class="text-xs text-gray-400 font-light mt-0.5">{{ $ind['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+
+        {{-- Track 2 (right → left, offset) --}}
+        <div class="relative mt-4">
+            <div class="flex gap-4 industry-track-2 w-max">
+                @foreach(array_merge(array_reverse($industries), array_reverse($industries)) as $ind)
+                <div class="flex-shrink-0 flex items-center gap-3 px-5 py-4 rounded-2xl border border-gray-100 bg-white shadow-sm w-64">
+                    <div class="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-brand text-xl">{{ $ind['icon'] }}</span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 leading-tight">{{ $ind['name'] }}</p>
+                        <p class="text-xs text-gray-400 font-light mt-0.5">{{ $ind['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     {{-- ============================================ --}}
     {{-- TRUSTED BY / LOGOS --}}
     {{-- ============================================ --}}
@@ -343,67 +405,112 @@
     {{-- ============================================ --}}
     {{-- TESTIMONIALS --}}
     {{-- ============================================ --}}
-    <section class="container mx-auto px-6 mb-32" id="testimonials">
-        <div class="text-center mb-16">
+    <section class="container mx-auto px-4 md:px-6 mb-20 md:mb-32" id="testimonials">
+        <div class="text-center mb-12">
+            <p class="text-xs uppercase tracking-widest text-brand font-semibold mb-2">Customer Stories</p>
             <h2 class="text-3xl md:text-4xl font-extralight mb-4">What teams are <span class="font-medium gradient-text">saying.</span></h2>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div class="p-8 bg-gray-50/50 border border-gray-100 rounded-2xl" id="testimonial-1">
-                <div class="flex gap-1 mb-4">
-                    @for($i = 0; $i < 5; $i++)
-                    <span class="material-symbols-outlined text-amber-400 text-lg">star</span>
-                    @endfor
-                </div>
-                <blockquote class="text-gray-700 font-light leading-relaxed mb-6">
-                    "Since switching to Bojeri, we've cut our month-end close from 5 days to 1. Everything just… connects."
-                </blockquote>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center text-brand font-semibold text-sm">SD</div>
-                    <div>
-                        <p class="text-sm font-medium text-gray-900">Sarah D.</p>
-                        <p class="text-xs text-gray-400">CFO, GrowthScale Inc</p>
-                    </div>
-                </div>
-            </div>
+        @php
+        $testimonials = [
+            ['quote'=>"Since switching to Bojeri, we've cut our month-end close from 5 days to 1. Everything just… connects.",'name'=>'Sarah D.','role'=>'CFO, GrowthScale Inc','init'=>'SD','color'=>'bg-brand/10 text-brand','module'=>'Accounting'],
+            ['quote'=>"Our HR team used to spend 8 hours a week reconciling timesheets. Now it's fully automatic.",'name'=>'Michael R.','role'=>'HR Director, LogiTrack','init'=>'MR','color'=>'bg-cyan-50 text-cyan-600','module'=>'HRM'],
+            ['quote'=>"We ran four separate tools before Bojeri. Now it's one login and zero data gaps.",'name'=>'Aisha L.','role'=>'CEO, NexWave Solutions','init'=>'AL','color'=>'bg-amber-50 text-amber-600','module'=>'Dashboard'],
+            ['quote'=>"Our sales team closes deals faster because leads, proposals, and invoices all live in the same place.",'name'=>'Omar T.','role'=>'Sales Manager, Elevate Group','init'=>'OT','color'=>'bg-violet-50 text-violet-600','module'=>'CRM'],
+            ['quote'=>"The POS syncs directly with accounting. No more end-of-day reconciliation nightmares.",'name'=>'Lena K.','role'=>'Operations Lead, RetailHub','init'=>'LK','color'=>'bg-rose-50 text-rose-600','module'=>'POS'],
+            ['quote'=>"Project tracking used to be spreadsheets and Slack threads. Bojeri's Kanban and milestones changed everything.",'name'=>'James W.','role'=>'CTO, BuildBridge Agency','init'=>'JW','color'=>'bg-indigo-50 text-indigo-600','module'=>'Projects'],
+            ['quote'=>"Payroll used to take two full days. With Bojeri it's done in an hour — shifts, overtime, everything included.",'name'=>'Fatima A.','role'=>'HR Manager, MedCore Clinics','init'=>'FA','color'=>'bg-teal-50 text-teal-600','module'=>'HRM'],
+            ['quote'=>"Having our warehouse, purchasing, and vendor payments in one place cut our procurement cycle by 40%.",'name'=>'Carlos M.','role'=>'Supply Chain Director, TradeFast','init'=>'CM','color'=>'bg-orange-50 text-orange-600','module'=>'Purchase'],
+            ['quote'=>"Support tickets, internal notes, file attachments — our helpdesk finally feels professional and nothing slips through.",'name'=>'Priya N.','role'=>'Customer Success, SaaSify','init'=>'PN','color'=>'bg-pink-50 text-pink-600','module'=>'Helpdesk'],
+        ];
+        $slides = array_chunk($testimonials, 3);
+        @endphp
 
-            <div class="p-8 bg-gray-50/50 border border-gray-100 rounded-2xl" id="testimonial-2">
-                <div class="flex gap-1 mb-4">
-                    @for($i = 0; $i < 5; $i++)
-                    <span class="material-symbols-outlined text-amber-400 text-lg">star</span>
-                    @endfor
-                </div>
-                <blockquote class="text-gray-700 font-light leading-relaxed mb-6">
-                    "Our HR team used to spend 8 hours a week reconciling timesheets. Now it's automatic."
-                </blockquote>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-600 font-semibold text-sm">MR</div>
-                    <div>
-                        <p class="text-sm font-medium text-gray-900">Michael R.</p>
-                        <p class="text-xs text-gray-400">HR Director, LogiTrack</p>
-                    </div>
-                </div>
-            </div>
+        <div class="relative max-w-5xl mx-auto" id="tcarousel">
 
-            <div class="p-8 bg-gray-50/50 border border-gray-100 rounded-2xl" id="testimonial-3">
-                <div class="flex gap-1 mb-4">
-                    @for($i = 0; $i < 5; $i++)
-                    <span class="material-symbols-outlined text-amber-400 text-lg">star</span>
-                    @endfor
-                </div>
-                <blockquote class="text-gray-700 font-light leading-relaxed mb-6">
-                    "We ran four separate tools before Bojeri. Now it's one login and zero data gaps."
-                </blockquote>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 font-semibold text-sm">AL</div>
-                    <div>
-                        <p class="text-sm font-medium text-gray-900">Aisha L.</p>
-                        <p class="text-xs text-gray-400">CEO, NexWave Solutions</p>
+            {{-- Slides --}}
+            @foreach($slides as $si => $group)
+            <div class="tslide grid grid-cols-1 md:grid-cols-3 gap-5"
+                 data-slide="{{ $si }}"
+                 style="opacity:{{ $si===0?'1':'0' }};{{ $si!==0?'position:absolute;top:0;left:0;width:100%;pointer-events:none;':'position:relative;' }}transition:opacity 0.6s ease;">
+                @foreach($group as $t)
+                <div class="p-6 bg-gray-50/50 border border-gray-100 rounded-2xl flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex gap-0.5">
+                            @for($s=0;$s<5;$s++)<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings:'FILL' 1">star</span>@endfor
+                        </div>
+                        <span class="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand/10 text-brand">{{ $t['module'] }}</span>
+                    </div>
+                    <blockquote class="text-gray-600 font-light leading-relaxed text-sm flex-1 mb-5">"{{ $t['quote'] }}"</blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full {{ $t['color'] }} flex items-center justify-center font-semibold text-xs shrink-0">{{ $t['init'] }}</div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900 leading-none mb-0.5">{{ $t['name'] }}</p>
+                            <p class="text-xs text-gray-400 font-light">{{ $t['role'] }}</p>
+                        </div>
                     </div>
                 </div>
+                @endforeach
             </div>
+            @endforeach
+
+            
+        </div>
+
+        {{-- Dots --}}
+        <div class="flex justify-center gap-2 mt-8" id="tdots">
+            @foreach($slides as $i => $s)
+            <button onclick="tGoTo({{ $i }})"
+                class="tdot h-2 rounded-full transition-all duration-300 {{ $i===0 ? 'w-6 bg-brand' : 'w-2 bg-gray-200' }}"
+                data-dot="{{ $i }}"></button>
+            @endforeach
         </div>
     </section>
+
+    @push('scripts')
+    <script>
+    (function(){
+        var cur    = 0;
+        var slides = document.querySelectorAll('#tcarousel .tslide');
+        var dots   = document.querySelectorAll('#tdots .tdot');
+        var total  = slides.length;
+        var timer;
+
+        function show(idx){
+            // fade out current
+            slides[cur].style.opacity = '0';
+            slides[cur].style.pointerEvents = 'none';
+            slides[cur].style.position = 'absolute';
+
+            cur = (idx + total) % total;
+
+            // fade in new
+            slides[cur].style.position = 'relative';
+            slides[cur].style.pointerEvents = '';
+            // tiny delay so transition fires
+            requestAnimationFrame(function(){
+                requestAnimationFrame(function(){
+                    slides[cur].style.opacity = '1';
+                });
+            });
+
+            dots.forEach(function(d, i){
+                d.classList.toggle('w-6',        i === cur);
+                d.classList.toggle('bg-brand',   i === cur);
+                d.classList.toggle('w-2',        i !== cur);
+                d.classList.toggle('bg-gray-200',i !== cur);
+            });
+        }
+
+        function next(){ show((cur + 1) % total); }
+        function start(){ timer = setInterval(next, 5000); }
+        function reset(){ clearInterval(timer); start(); }
+
+        window.tGoTo = function(i){ reset(); show(i); };
+        start();
+    })();
+    </script>
+    @endpush
 
     {{-- ============================================ --}}
     {{-- BELOW THE FOLD — Platform Highlights --}}
@@ -412,7 +519,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-extralight mb-4">Enterprise-ready. <span class="font-medium text-gray-900">Out of the box.</span></h2>
-                <p class="text-gray-500 font-light max-w-xl mx-auto">Built on Laravel 12 with real-time capabilities, multi-language support, and flexible subscription plans.</p>
+                <p class="text-gray-500 font-light max-w-xl mx-auto">Built with real-time capabilities, multi-language support, and flexible subscription plans.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -454,101 +561,200 @@
             </div>
         </div>
     </section>
+    
+
+    @push('styles')
+    <style>
+        @keyframes scroll-left {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes scroll-right {
+            0%   { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        .industry-track-1 {
+            animation: scroll-left 120s linear infinite;
+        }
+        .industry-track-2 {
+            animation: scroll-right 120s linear infinite;
+        }
+        .industry-track-1:hover,
+        .industry-track-2:hover {
+            animation-play-state: paused;
+        }
+    </style>
+    @endpush
 
     {{-- ============================================ --}}
     {{-- PRICING --}}
     {{-- ============================================ --}}
-    <section class="container mx-auto px-6 mb-32" id="pricing">
-        <div class="text-center mb-16">
+    <section class="container mx-auto px-4 md:px-6 mb-20 md:mb-32" id="pricing">
+        <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-extralight mb-4">Transparent <span class="font-medium gradient-text">pricing.</span></h2>
-            <p class="text-gray-500 font-light">Plans that grow with your business. No hidden fees.</p>
+            <p class="text-gray-500 font-light mb-8">Plans that grow with your business. No hidden fees.</p>
+
+            {{-- Billing Toggle --}}
+            <div class="inline-flex items-center bg-gray-100 rounded-full p-1 gap-1">
+                <button onclick="setBilling('monthly')" id="btn-monthly"
+                    class="px-5 py-2 rounded-full text-sm font-medium transition-all text-gray-500 hover:text-gray-700">
+                    Monthly
+                </button>
+                <button onclick="setBilling('yearly')" id="btn-yearly"
+                    class="px-5 py-2 rounded-full text-sm font-medium transition-all bg-white text-gray-900 shadow-sm">
+                    Yearly <span class="text-brand text-xs font-semibold ml-1">+2 months free</span>
+                </button>
+            </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {{-- Free --}}
-            <div class="p-10 border border-gray-100 rounded-3xl flex flex-col hover:shadow-lg transition-shadow" id="price-free">
-                <h4 class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">Starter</h4>
-                <div class="flex items-baseline gap-1 mb-2">
-                    <span class="text-4xl font-extralight">$0</span>
-                    <span class="text-gray-400 font-light">/mo</span>
+        @php
+        $modules = ['Accounting','CRM','HRM','Paypal','POS','Project','Stripe'];
+        @endphp
+
+        <div class="max-w-4xl mx-auto">
+
+            {{-- ── Plan Cards ── --}}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 items-stretch">
+
+                {{-- Free Plan --}}
+                <div class="rounded-2xl border border-gray-100 p-6 hover:shadow-md transition-shadow flex flex-col">
+                    <h4 class="text-base font-semibold text-gray-900 mb-1 text-center">Free Plan</h4>
+                    <p class="text-xs text-gray-400 font-light mb-4 text-center leading-relaxed">Perfect for getting started with basic features</p>
+                    <div class="text-center mb-4">
+                        <span class="text-4xl font-bold text-brand">Free</span>
+                        <p class="text-xs text-brand font-medium mt-1">&nbsp;</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600 font-light mb-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>5 users</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>1 GB storage</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>3 months free trial</li>
+                    </ul>
+                    <div class="border-t border-gray-100 pt-4 flex-1">
+                        <p class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider mb-2 text-center">Modules</p>
+                        <div class="flex flex-wrap gap-1.5 justify-center">
+                            @foreach($modules as $mod)
+                            <span class="px-2.5 py-1 rounded-full bg-brand/8 text-brand text-[11px] font-medium">{{ $mod }}</span>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
-                <p class="text-sm text-gray-400 font-light mb-8">Perfect for solo operators getting started.</p>
-                <ul class="space-y-3 mb-10 flex-1 text-sm font-light text-gray-600">
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        Core Invoicing &amp; Accounting
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        Up to 5 Users
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        Dashboard &amp; Reports
-                    </li>
-                </ul>
-                <a href="/register" class="w-full py-3 rounded-full border border-gray-200 text-sm font-medium text-center hover:bg-gray-50 hover:border-brand transition-all block">Start Free</a>
+
+                {{-- Starter Plan (Most Popular) --}}
+                <div class="rounded-2xl border-2 border-brand p-6 shadow-xl shadow-brand/10 relative flex flex-col mt-4 sm:mt-0" id="pricing">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand text-white px-4 py-1 rounded-full text-[11px] font-semibold flex items-center gap-1.5">
+                        <span>★</span> Most Popular
+                    </div>
+                    <h4 class="text-base font-semibold text-gray-900 mb-1 text-center mt-1">Starter Plan</h4>
+                    <p class="text-xs text-gray-400 font-light mb-4 text-center leading-relaxed">For small teams &amp; growing businesses</p>
+                    <div class="text-center mb-1">
+                        <span class="text-4xl font-bold text-gray-900 plan-price" data-yearly="2.5" data-monthly="3">36</span><span class="text-2xl font-bold text-gray-900">$</span>
+                        <span class="text-sm text-gray-400 font-light plan-period" data-yearly="/yr" data-monthly="/mo">/yr</span>
+                    </div>
+                    <p class="text-[11px] text-brand font-medium mb-4 text-center yearly-badge">Billed $30/yr annually</p>
+                    <p class="text-[11px] text-gray-400 mb-4 text-center monthly-badge hidden">Billed $36/yr annually</p>
+                    <ul class="space-y-2 text-sm text-gray-600 font-light mb-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>10 users</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>5 GB storage</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>1 month trial</li>
+                    </ul>
+                    <div class="border-t border-brand/20 pt-4 flex-1">
+                        <p class="text-[10px] text-brand font-semibold uppercase tracking-wider mb-2 text-center">Modules</p>
+                        <div class="flex flex-wrap gap-1.5 justify-center">
+                            @foreach($modules as $mod)
+                            <span class="px-2.5 py-1 rounded-full bg-brand/10 text-brand text-[11px] font-medium">{{ $mod }}</span>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Enterprise Plan --}}
+                <div class="rounded-2xl border border-gray-100 p-6 hover:shadow-md transition-shadow flex flex-col">
+                    <h4 class="text-base font-semibold text-gray-900 mb-1 text-center">Enterprise</h4>
+                    <p class="text-xs text-gray-400 font-light mb-4 text-center leading-relaxed">Multi-tenant &amp; white-label deployments</p>
+                    <div class="text-center mb-4">
+                        <span class="text-4xl font-bold text-gray-900">Custom</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 mb-4 text-center">&nbsp;</p>
+                    <ul class="space-y-2 text-sm text-gray-600 font-light mb-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>Unlimited users</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>Custom storage</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>Dedicated support</li>
+                    </ul>
+                    <div class="border-t border-gray-100 pt-4 flex-1">
+                        <p class="text-[10px] text-gray-400 font-semibold uppercase tracking-wider mb-2 text-center">Modules</p>
+                        <div class="flex flex-wrap gap-1.5 justify-center">
+                            @foreach($modules as $mod)
+                            <span class="px-2.5 py-1 rounded-full bg-brand/8 text-brand text-[11px] font-medium">{{ $mod }}</span>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            {{-- Pro --}}
-            <div class="p-10 border-2 border-brand rounded-3xl flex flex-col relative shadow-lg shadow-brand/5" id="price-pro">
-                <div class="absolute top-0 right-8 -translate-y-1/2 bg-brand text-white px-4 py-1 rounded-full text-[10px] font-semibold tracking-wide">MOST POPULAR</div>
-                <h4 class="text-xs uppercase tracking-widest text-brand font-semibold mb-2">Professional</h4>
-                <div class="flex items-baseline gap-1 mb-2">
-                    <span class="text-4xl font-extralight">$49</span>
-                    <span class="text-gray-400 font-light">/mo</span>
+            {{-- ── CTA Row ── --}}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div>
+                    <a href="/register" class="w-full py-3 rounded-full border border-gray-200 text-sm font-medium text-center hover:bg-gray-50 hover:border-brand transition-all block">Start Free</a>
                 </div>
-                <p class="text-sm text-gray-400 font-light mb-8">For growing teams that need all modules.</p>
-                <ul class="space-y-3 mb-10 flex-1 text-sm font-light text-gray-600">
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        All 16 Modules
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        Unlimited Users
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        Real-Time Messenger
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        Multi-Language Support
-                    </li>
-                </ul>
-                <a href="/register" class="w-full py-3 rounded-full bg-brand text-white text-sm font-semibold text-center hover:shadow-lg hover:shadow-brand/20 transition-all block">Go Professional</a>
-            </div>
-
-            {{-- Enterprise --}}
-            <div class="p-10 border border-gray-100 rounded-3xl flex flex-col hover:shadow-lg transition-shadow" id="price-enterprise">
-                <h4 class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">Enterprise</h4>
-                <div class="flex items-baseline gap-1 mb-2">
-                    <span class="text-4xl font-extralight">Custom</span>
+                <div>
+                    <a href="/register" class="w-full py-3 rounded-full bg-brand text-white text-sm font-semibold text-center hover:shadow-lg hover:shadow-brand/20 transition-all block">Get Started</a>
                 </div>
-                <p class="text-sm text-gray-400 font-light mb-8">For multi-tenant and white-label deployments.</p>
-                <ul class="space-y-3 mb-10 flex-1 text-sm font-light text-gray-600">
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        Custom Deployment
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        Dedicated Support
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        White-Label Branding
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-brand text-lg">check_circle</span>
-                        SLA &amp; SSO
-                    </li>
-                </ul>
-                <a href="#" class="w-full py-3 rounded-full border border-gray-200 text-sm font-medium text-center hover:bg-gray-50 hover:border-brand transition-all block">Contact Sales</a>
+                <div>
+                    <a href="#contact" class="w-full py-3 rounded-full border border-gray-200 text-sm font-medium text-center hover:bg-gray-50 hover:border-brand transition-all block">Contact Sales</a>
+                </div>
             </div>
         </div>
     </section>
+
+    @push('scripts')
+    <script>
+        (function () {
+            var billing = 'yearly';
+
+            function setBilling(mode) {
+                billing = mode;
+
+                // Toggle button styles
+                var btnMonthly = document.getElementById('btn-monthly');
+                var btnYearly  = document.getElementById('btn-yearly');
+                if (mode === 'yearly') {
+                    btnYearly.classList.add('bg-white', 'text-gray-900', 'shadow-sm');
+                    btnYearly.classList.remove('text-gray-500');
+                    btnMonthly.classList.remove('bg-white', 'text-gray-900', 'shadow-sm');
+                    btnMonthly.classList.add('text-gray-500');
+                } else {
+                    btnMonthly.classList.add('bg-white', 'text-gray-900', 'shadow-sm');
+                    btnMonthly.classList.remove('text-gray-500');
+                    btnYearly.classList.remove('bg-white', 'text-gray-900', 'shadow-sm');
+                    btnYearly.classList.add('text-gray-500');
+                }
+
+                // Update prices
+                document.querySelectorAll('.plan-price').forEach(function (el) {
+                    el.textContent = mode === 'yearly' ? el.dataset.yearly : el.dataset.monthly;
+                });
+                document.querySelectorAll('.plan-period').forEach(function (el) {
+                    el.textContent = mode === 'yearly' ? el.dataset.yearly : el.dataset.monthly;
+                });
+
+                // Show/hide yearly / monthly sub-labels
+                document.querySelectorAll('.yearly-badge').forEach(function (el) {
+                    el.classList.toggle('hidden', mode !== 'yearly');
+                });
+                document.querySelectorAll('.monthly-badge').forEach(function (el) {
+                    el.classList.toggle('hidden', mode !== 'monthly');
+                });
+            }
+
+            // Expose globally for onclick
+            window.setBilling = setBilling;
+
+            // Default: yearly
+            setBilling('yearly');
+        })();
+    </script>
+  
+    @endpush
 
     {{-- ============================================ --}}
     {{-- FEATURE STRIP --}}

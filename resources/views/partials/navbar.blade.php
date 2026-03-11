@@ -1,8 +1,8 @@
 <!-- BEGIN: Navigation -->
 <nav class="fixed top-0 w-full z-50 glass border-b border-gray-100/50 h-16 flex items-center" id="main-nav">
-    <div class="container mx-auto px-6 flex justify-between items-center">
+    <div class="container px-6 md:px-0 mx-auto flex justify-between items-center">
         <!-- Brand -->
-        <a href="/" class="flex items-center gap-2.5" id="brand-logo">
+        <a href="/" class="flex items-center gap-2.5 md:w-64" id="brand-logo">
             <div class="h-10">
                 <img src="{{ asset('assets/logo.png') }}" class="object-fit w-full h-full">
             </div>  
@@ -11,6 +11,7 @@
         <!-- Desktop Nav -->
         <div class="hidden md:flex items-center gap-8">
             <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors" href="/">Home</a>
+            <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors" href="/#pricing">Pricing</a>
 
             <!-- Solutions Mega Menu -->
             <div class="group h-16 flex items-center">
@@ -61,11 +62,11 @@
 
 
             <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors" href="/docs">Docs</a>
-            <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors" href="/articles">Articles</a>
+            <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors hidden" href="/articles">Articles</a>
         </div>
 
         <!-- CTA -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center md:w-64 justify-end gap-3">
             <a href="/login" class="hidden sm:inline-flex text-sm font-medium text-gray-600 px-5 py-2 rounded-full border border-gray-200 hover:border-brand hover:text-brand transition-all" id="nav-signin">
                 Sign In
             </a>
@@ -83,7 +84,7 @@
     <div class="hidden absolute top-16 left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden z-50" id="mobile-menu">
         <div class="container mx-auto px-6 py-6 flex flex-col gap-4">
             <a class="text-sm font-medium text-gray-700 py-2 hover:text-brand" href="/">Home</a>
-
+            <a class="text-sm font-medium text-gray-700 py-2 hover:text-brand" href="/#pricing">Pricing</a>
             <a class="text-sm font-medium text-gray-700 py-2 hover:text-brand" href="/docs">Docs</a>
             <a class="text-sm font-medium text-gray-700 py-2 hover:text-brand" href="/articles">Articles</a>
             <hr class="border-gray-100"/>

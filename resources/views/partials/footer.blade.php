@@ -25,10 +25,9 @@
         <div class="grid md:grid-cols-5 gap-12 mb-16">
             <div class="col-span-1 md:col-span-2">
                 <a href="/" class="flex items-center gap-2.5 mb-5">
-                    <div class="w-7 h-7 bg-brand rounded-lg flex items-center justify-center shadow-sm">
-                        <span class="material-symbols-outlined text-white text-sm">deployed_code</span>
-                    </div>
-                    <span class="text-lg font-semibold tracking-tight text-gray-900">Bojeri</span>
+                    <div class="h-10">
+                        <img src="{{ asset('assets/logo.png') }}" class="object-fit w-full h-full">
+                    </div>  
                 </a>
                 <p class="text-sm text-gray-500 font-light leading-relaxed mb-6 max-w-xs">
                     A modular, multi-tenant ERP platform built for growing businesses. Everything your team needs, in one place.
@@ -78,9 +77,9 @@
         <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200 text-xs text-gray-400 font-medium">
             <p>© 2026 Bojeri. All rights reserved.</p>
             <div class="flex gap-6 mt-4 md:mt-0">
-                <a class="hover:text-gray-900 transition-colors" href="#">Privacy Policy</a>
-                <a class="hover:text-gray-900 transition-colors" href="#">Terms of Service</a>
-                <a class="hover:text-gray-900 transition-colors" href="#">Cookie Settings</a>
+                <a class="hover:text-gray-900 transition-colors" href="{{ route('privacy') }}">Privacy Policy</a>
+                <a class="hover:text-gray-900 transition-colors" href="{{ route('terms') }}">Terms of Service</a>
+                <a class="hover:text-gray-900 transition-colors" href="{{ route('cookies') }}">Cookie Settings</a>
             </div>
         </div>
     </div>
