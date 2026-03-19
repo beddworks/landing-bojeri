@@ -1,8 +1,5 @@
 @extends('layouts.app')
 
-@section('title', __('front.meta.home_title'))
-@section('meta_description', __('front.meta.home_description'))
-
 @section('content')
 <div class="pt-20">
 
