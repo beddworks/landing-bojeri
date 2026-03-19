@@ -2,46 +2,84 @@
 
 namespace App\Models;
 
-use App\Traits\HasStitch;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Str;
 
 class Article extends Model
 {
-    use HasFactory, HasStitch;
+    use HasFactory;
 
     protected $fillable = [
-        'content_id',
-        'category',
-        'tags',
+        'title',
+        'slug',
+        'excerpt',
+        'content',
+        'type',
+        'language',
+        'status',
         'featured_image',
-        'author_id',
+        'published_at',
+        // SEO
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
+        'og_image',
+        'views',
     ];
 
     protected function casts(): array
     {
         return [
-            'tags' => 'array',
+            'published_at' => 'datetime',
         ];
     }
 
-    // ─── Relationships ───────────────────────────────────
-
-    public function content(): BelongsTo
+    protected static function booted(): void
     {
-        return $this->belongsTo(Content::class);
+        static::creating(function (Article $article) {
+            if (empty($article->slug)) {
+                $article->slug = Str::slug($article->title);
+            }
+        });
     }
 
-    public function author(): BelongsTo
+    // SEO helpers
+
+    public function getSeoTitle(): string
     {
-        return $this->belongsTo(User::class, 'author_id');
+        return $this->meta_title ?: $this->title;
     }
 
-    // ─── Scopes ──────────────────────────────────────────
-
-    public function scopeByCategory($query, string $category)
+    public function getSeoDescription(): string
     {
-        return $query->where('category', $category);
+        return $this->meta_description ?: Str::limit(strip_tags($this->excerpt ?: $this->content), 160);
+    }
+
+    public function getOgImage(): ?string
+    {
+        return $this->og_image ?: $this->featured_image;
+    }
+
+    public function incrementView(): void
+    {
+        $this->increment('views');
+    }
+
+    // Scopes
+
+    public function scopePublished($query)
+    {
+        return $query->where('status', 'published');
+    }
+
+    public function scopeByLanguage($query, string $language)
+    {
+        return $query->where('language', $language);
+    }
+
+    public function scopeByType($query, string $type)
+    {
+        return $query->where('type', $type);
     }
 }
