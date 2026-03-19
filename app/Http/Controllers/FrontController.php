@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Session;
@@ -63,12 +64,46 @@ class FrontController extends Controller
 
     public function articles()
     {
-        return view('articles');
+        $articles = Article::published()
+            ->byType('article')
+            ->byLanguage(app()->getLocale())
+            ->latest('published_at')
+            ->paginate(9);
+
+        return view('articles', compact('articles'));
     }
 
     public function articleShow($slug)
     {
-        return view('article-show', compact('slug'));
+        $article = Article::published()
+            ->byType('article')
+            ->where('slug', $slug)
+            ->firstOrFail();
+
+        // Switch session locale to match the article's language
+        if ($article->language !== app()->getLocale()) {
+            Session::put('locale', $article->language);
+            App::setLocale($article->language);
+        }
+
+        $viewedKey = 'viewed_articles';
+        $viewed = Session::get($viewedKey, []);
+
+        if (!in_array($article->id, $viewed)) {
+            $article->incrementView();
+            $viewed[] = $article->id;
+            Session::put($viewedKey, $viewed);
+        }
+
+        $related = Article::published()
+            ->byType('article')
+            ->byLanguage($article->language)
+            ->where('id', '!=', $article->id)
+            ->latest('published_at')
+            ->limit(3)
+            ->get();
+
+        return view('article-show', compact('article', 'related'));
     }
 
     public function docs()

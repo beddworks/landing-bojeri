@@ -17,9 +17,10 @@ Route::get('/lang/{locale}', function ($locale) {
 Route::controller(FrontController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/articles', 'articles')->name('articles');
-    Route::get('/articles/{slug}', 'articleShow')->name('articles.show');
     Route::get('/docs', 'docs')->name('docs');
     Route::get('/privacy', 'privacy')->name('privacy');
     Route::get('/terms', 'terms')->name('terms');
     Route::get('/cookies', 'cookies')->name('cookies');
+    // Top-level slug route — must remain last to avoid swallowing named routes
+    Route::get('/{slug}', 'articleShow')->name('articles.show');
 });
