@@ -19,7 +19,7 @@
                 @else
                     <div class="absolute inset-0 bg-gradient-to-br from-brand/30 to-gray-900"></div>
                 @endif
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-gray-900/20"></div>
                 <div class="relative p-10 md:p-16 max-w-3xl">
                     <span class="inline-block px-3 py-1 bg-brand text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">
                         @lang('front.articles.featured_badge')
@@ -27,11 +27,6 @@
                     <h1 class="text-3xl md:text-5xl font-extralight text-white leading-tight mb-6">
                         {{ $featured->title }}
                     </h1>
-                    @if($featured->excerpt)
-                    <p class="text-gray-300 font-light text-lg mb-8 max-w-xl">
-                        {{ $featured->excerpt }}
-                    </p>
-                    @endif
                     <div class="flex items-center gap-6">
                         <a href="{{ route('articles.show', $featured->slug) }}"
                            class="bg-brand text-white px-8 py-3 rounded-full font-medium hover:bg-brand-dark transition-colors">
@@ -72,12 +67,13 @@
                         {{ $item->excerpt }}
                     </p>
                     @endif
-                    <div class="flex items-center gap-3 text-gray-400 text-xs font-medium uppercase tracking-tighter">
-                        <span>{{ $item->published_at?->format('M d, Y') }}</span>
-                        <span class="size-1 bg-gray-200 rounded-full"></span>
-                        <span class="flex items-center gap-1">
-                            <span class="material-symbols-outlined text-xs">visibility</span>
-                            {{ number_format($item->views) }}
+                    <div class="flex items-center justify-between mt-4">
+                        <span class="text-gray-400 text-xs font-medium uppercase tracking-tighter">
+                            {{ $item->published_at?->format('M d, Y') }}
+                        </span>
+                        <span class="inline-flex items-center gap-1 text-xs font-semibold text-brand group-hover:gap-2 transition-all duration-200">
+                            @lang('front.articles.featured_read_btn')
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </span>
                     </div>
                 </a>

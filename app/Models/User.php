@@ -33,9 +33,6 @@ class User extends Authenticatable implements FilamentUser
         ];
     }
 
-    public function canAccessPanel(Panel $panel): bool
-    {
-        // HasPanelShield provides this, but we override to also allow super_admin
-        return $this->hasRole(config('filament-shield.super_admin.name'));
-    }
+    // canAccessPanel is provided by HasPanelShield:
+    // allows super_admin OR panel_user role (auto-assigned on user creation)
 }

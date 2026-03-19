@@ -23,7 +23,11 @@ class ArticlePolicy
      */
     public function view(User $user, Article $article): bool
     {
-        return $user->can('view_article');
+        if ($user->hasRole('super_admin')) {
+            return true;
+        }
+
+        return $user->can('view_article') && $article->user_id === $user->id;
     }
 
     /**
@@ -39,7 +43,11 @@ class ArticlePolicy
      */
     public function update(User $user, Article $article): bool
     {
-        return $user->can('update_article');
+        if ($user->hasRole('super_admin')) {
+            return true;
+        }
+
+        return $user->can('update_article') && $article->user_id === $user->id;
     }
 
     /**
@@ -47,7 +55,11 @@ class ArticlePolicy
      */
     public function delete(User $user, Article $article): bool
     {
-        return $user->can('delete_article');
+        if ($user->hasRole('super_admin')) {
+            return true;
+        }
+
+        return $user->can('delete_article') && $article->user_id === $user->id;
     }
 
     /**

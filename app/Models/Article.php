@@ -11,6 +11,7 @@ class Article extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'title',
         'slug',
         'excerpt',
@@ -59,6 +60,11 @@ class Article extends Model
     public function getOgImage(): ?string
     {
         return $this->og_image ?: $this->featured_image;
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(\App\Models\User::class);
     }
 
     public function incrementView(): void

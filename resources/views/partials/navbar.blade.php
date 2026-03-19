@@ -59,7 +59,7 @@
 
 
             <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors" href="/docs">@lang('front.nav.docs')</a>
-            <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors hidden" href="/articles">@lang('front.nav.articles')</a>
+            <a class="text-sm font-medium text-gray-500 hover:text-brand transition-colors" href="/articles">@lang('front.nav.articles')</a>
         </div>
 
         <!-- CTA -->

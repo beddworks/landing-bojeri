@@ -18,7 +18,6 @@ use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
-use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 
 class UserResource extends Resource
@@ -54,7 +53,6 @@ class UserResource extends Resource
                             ->schema([
                                 TextInput::make('password')
                                     ->password()
-                                    ->dehydrateStateUsing(fn (string $state): string => Hash::make($state))
                                     ->dehydrated(fn (?string $state): bool => filled($state))
                                     ->required(fn (string $operation): bool => $operation === 'create')
                                     ->revealable()
