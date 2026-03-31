@@ -240,7 +240,7 @@ return [
         'modular_title'     => 'Modular by Design',
         'modular_desc'      => 'Turn on only the modules you need. Start with invoicing and add HRM, CRM, or POS as you grow. Your plan controls which tools your team can access.',
         'multitenant_title' => 'Your Brand on Every Client Account',
-        'multitenant_desc'  => 'Each company gets a fully isolated workspace with its own logo, currency, language, and data. Launch Bojeri under your own brand as a SaaS product.',
+        'multitenant_desc'  => 'Each company gets a fully isolated workspace with its own logo, currency, language, and data.',
         'realtime_title'    => 'Real-Time Everything',
         'realtime_desc'     => 'Powered by Pusher for instant messaging, live presence, and real-time notifications. Your team sees updates the moment they happen.',
         'i18n_title'        => 'Localized for the World',
